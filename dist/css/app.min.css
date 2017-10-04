@@ -1736,6 +1736,45 @@ label {
   .popup-form .app-input, .popup-form .app-textarea, .popup-form .app-select .jq-selectbox__select, .app-select .popup-form .jq-selectbox__select {
     margin: 0 0 14px; }
 
+.wowFadeUp, .wowFadeDown, .wowFadeLeft, .wowFadeRight {
+  opacity: 0;
+  -webkit-animation-name: wowFade;
+          animation-name: wowFade;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s; }
+
+.wowFadeUp {
+  -webkit-transform: translate3d(0, 20px, 0);
+          transform: translate3d(0, 20px, 0); }
+
+.wowFadeDown {
+  -webkit-transform: translate3d(0, -20px, 0);
+          transform: translate3d(0, -20px, 0); }
+
+.wowFadeLeft {
+  -webkit-transform: translate3d(-20px, 0px, 0);
+          transform: translate3d(-20px, 0px, 0); }
+
+.wowFadeRight {
+  -webkit-transform: translate3d(20px, 0px, 0);
+          transform: translate3d(20px, 0px, 0); }
+
+@-webkit-keyframes wowFade {
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
+@keyframes wowFade {
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); } }
+
 .begin {
   position: relative;
   z-index: 10;
