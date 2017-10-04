@@ -5,7 +5,7 @@
   "homepage": "",
   "git": {
     "scripts": {
-      "pre-push": "surge --project ./dist --domain crossfit.surge.sh"
+      "pre-push": "surge --project ./dist --domain crossfit2.surge.sh"
     }
   },
   "dependencies": {
