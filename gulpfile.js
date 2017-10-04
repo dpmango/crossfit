@@ -5,40 +5,27 @@
 // --------------------------------------------------------------------------
 
 var gulp         = require('gulp'),
-	browserSync  = require('browser-sync'),
-	watch 		 = require('gulp-watch'),
-
-	concat		 = require('gulp-concat'),
-	plumber 	 = require('gulp-plumber'),
-
-	pug          = require('gulp-pug'),
-	minifyHTML   = require('gulp-minify-html'),
-
-
-	sass 		 = require('gulp-sass'),
-	uncss        = require('gulp-uncss'),
-	autoprefixer = require('gulp-autoprefixer'),
-	minify_css   = require('gulp-minify-css'),
-	cleanCSS     = require('gulp-clean-css'),
-
-	
-	uglify 		 = require('gulp-uglify'),
-	
-	
-	spritesmith  = require('gulp.spritesmith'),
-	cheerio 	 = require('gulp-cheerio'),
-	svgmin       = require('gulp-svgmin'),
-	svgSprite    = require("gulp-svg-sprite"),
-	replace      = require('gulp-replace'),
-
-	clean        = require('del'),
-
-	ftp          = require('gulp-ftp'),
-	zip      	 = require('gulp-zip');
-
-
-var config       = require('./config');
-
+	browserSync  	 = require('browser-sync'),
+	watch 		 		 = require('gulp-watch'),
+	concat		 		 = require('gulp-concat'),
+	plumber 	 		 = require('gulp-plumber'),
+	pug         	 = require('gulp-pug'),
+	minifyHTML  	 = require('gulp-minify-html'),
+	sass 		 			 = require('gulp-sass'),
+	uncss       	 = require('gulp-uncss'),
+	sourcemaps     = require('gulp-sourcemaps'),
+	postcss        = require('gulp-postcss'),
+	flexbugs       = require('postcss-flexbugs-fixes'),
+	sorting        = require('postcss-sorting'),
+	autoprefixer   = require('autoprefixer'),
+	focus          = require('postcss-focus'),
+	uglify 		 		 = require('gulp-uglify'),
+	spritesmith    = require('gulp.spritesmith'),
+	cheerio 	 		 = require('gulp-cheerio'),
+	svgmin         = require('gulp-svgmin'),
+	svgSprite      = require("gulp-svg-sprite"),
+	replace        = require('gulp-replace'),
+	clean          = require('del');
 
 // --------------------------------------------------------------------------
 // Settings
@@ -53,7 +40,7 @@ var src = {
 	images: 'src/images/**/*',
 	svg: 'src/svg/**/*',
 	video: 'src/video/**/*',
-	
+
 	spriteImages: 'src/sprites/_images/*.png',
 	spriteSvg: 'src/sprites/_svg/*.svg'
 };
@@ -71,27 +58,6 @@ var dist = {
 	spriteSvg: 'dist/sprites/'
 };
 
-
-// --------------------------------------------------------------------------
-// Zip
-// --------------------------------------------------------------------------
-
-gulp.task('zip', function () {
-    gulp.src(['./**', '!./node_modules/', '!./node_modules/**', '!./config.json'])
-        .pipe(zip(config.project.name + '.zip'))
-        .pipe(gulp.dest('./'))
-});
-
-
-// --------------------------------------------------------------------------
-// Ftp
-// --------------------------------------------------------------------------
-
-
-gulp.task('ftp', function () {
-    return gulp.src('dist/**/*')
-        .pipe(ftp(config.ftp));
-});
 
 // --------------------------------------------------------------------------
 // Sprites
@@ -147,7 +113,7 @@ gulp.task('spriteSvg', function () {
 					}
 				}
 			}
-			
+
         }))
         .pipe(gulp.dest('dist/sprites/'));
 });
@@ -159,12 +125,8 @@ gulp.task('spriteSvg', function () {
 gulp.task('html', function() {
 
 	return gulp.src(src.html)
-			
 		.pipe(plumber())
 		.pipe(pug({pretty: true}))
-		// .pipe(minifyHTML({
-  //           quotes: true
-  //       }))
 		.pipe(gulp.dest(dist.html))
 		.pipe(browserSync.reload({ stream: true }))
 
@@ -225,27 +187,25 @@ gulp.task('video', function() {
 // --------------------------------------------------------------------------
 // Scss
 // --------------------------------------------------------------------------
+var processors = [
+  focus(),
+  autoprefixer({
+    browsers: ['last 10 versions'],
+    remove: true, // remove outdated prefixes?
+    // cascade: false
+  }),
+  sorting(),
+  flexbugs()
+];
 
 gulp.task('scss', function() {
 
 	return gulp.src(src.scss)
-		
+		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(sass())
-		.pipe(autoprefixer({
-		    browsers: ['last 2 versions', '> 1%', 'ie 9'],
-		    cascade: false
-		}))
-
-		// .pipe(uncss({
-		// 	html: ['src/**/*.html'],
-		// 	ignore: [/\.is-*/, /\.flexboxlegacy/, /\.backgroundblendmode/, /\.fancybox*/, /\.scroll*/, /\.jq-*/]
-		// }))
-
+		.pipe(postcss(processors))
 		.pipe(concat('app.min.css'))
-		// .pipe(minify_css())
-		// .pipe(cleanCSS({compatibility: 'ie8'}))
-		
 		.pipe(gulp.dest(dist.css))
 		.pipe(browserSync.reload({ stream: true }))
 
@@ -262,7 +222,7 @@ gulp.task('js', function() {
 		.pipe(plumber())
 		.pipe(uglify())
 		.pipe(concat('app.min.js'))
-		
+
 		.pipe(gulp.dest(dist.js))
 		.pipe(browserSync.reload({ stream: true }))
 });
@@ -289,7 +249,7 @@ gulp.task('watch', function() {
 		open: true,
     	notify: false
 	});
-	
+
 	gulp.watch(src.spriteImages, ['spriteImages']);
 	gulp.watch(src.spriteSvg, ['spriteSvg']);
 
@@ -300,7 +260,7 @@ gulp.task('watch', function() {
 	gulp.watch(src.video, ['video']);
 	gulp.watch(src.scss, ['scss']);
 	gulp.watch(src.js, ['js']);
-	
+
 });
 
 

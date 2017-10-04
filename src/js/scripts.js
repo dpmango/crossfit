@@ -31,7 +31,7 @@ $(function() {
 
         new ScrollMagic.Scene({triggerElement: ".nav", pushFollowers: false, duration: 0, triggerHook: 0})
                        .setClassToggle(".nav-dropdown", "is-fixed")
-                       .addIndicators()
+                       // .addIndicators()
                        .addTo(controller);
 
     }
@@ -145,13 +145,13 @@ $(function() {
 		$(this).closest('table').find('tr').each(function() {
 			$(this).children().eq(i).toggleClass('is-hightlight');
 		});
-		
+
 	});
 
 	// --------------------------------------------------------------------------
 	// Table
 	// --------------------------------------------------------------------------
-	
+
 	$('[data-mfp]').magnificPopup({
 		type:'inline',
 		mainClass: 'mfp-with-zoom',
@@ -373,7 +373,7 @@ $(function() {
             map.addListener('mouseenter', function(e) {
                 return false;
             });
-            
+
         }
 
         initMap();
