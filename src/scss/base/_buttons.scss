@@ -1,0 +1,77 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+
+.btn {
+	font: 700 16px/1 'Proxima Nova', Helvetica, Arial, sans-serif;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	border: 1px solid transparent;
+	padding: 14px 30px 16px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: .25s;
+	text-align: center;
+	cursor: pointer;
+    height: 49px;
+	&:hover {
+		text-decoration: none;
+	}
+	&:active {
+		transition: none;
+		transform: translate3d(0,1px,0);
+	}
+}
+
+.btn-block {
+	width: 100%;
+}
+
+.btn-turq {
+	background: #009CB4;
+	border-color: #009CB4;
+	color: #fff;
+    box-shadow: 1.4px 8px 32px rgba(#0088b4,0.52);
+	&:hover {
+		background: #00B2B4;
+		border-color: #00B2B4;
+		color: #fff;
+	}
+    &:active {
+        background: #009CB4;
+        border-color: #009CB4;
+        box-shadow: none;
+    }
+}
+
+.btn-red {
+    background: #EE163A;
+    border-color: #EE163A;
+    color: #fff;
+    &:before {
+    	content: '';
+    	display: block;
+    	position: absolute;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    	height: 16px;
+    	border-radius: 8px;
+    	box-shadow: 1.4px 7.9px 32px rgba(238, 22, 58, 0.53);
+    	transition: inherit;
+    }
+    &:hover {
+        background: #26171B;
+        border-color: #26171B;
+        color: #fff;
+        &:before {
+        	opacity: 0;
+        }
+    }
+    &:active {
+        background: #26171B;
+        border-color: #26171B;
+    }
+}

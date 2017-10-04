@@ -1,0 +1,97 @@
+// --------------------------------------------------------------------------
+// Contacts
+// --------------------------------------------------------------------------
+
+.contacts {
+	padding: 95px 0 90px;
+	background: #222;
+	position: relative;
+	z-index: 10;
+	color: #fff;
+}
+
+.contacts-map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	background: #333;
+	.gm-style-cc { display: none; }
+}
+
+.contacts-desc {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.contacts-heading {
+	margin: 0 0 28px;
+}
+
+.contacts-phone {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 18px;
+	font-size: 26px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #fff;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+	}
+}
+
+.contacts-mail {
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 0 18px;
+	font-size: 28px;
+	line-height: 1;
+	text-decoration: none;
+	color: #009cb4;
+	border-bottom: 1px dotted #009cb4;
+	padding: 0 0 5px;
+	&:hover {
+		text-decoration: none;
+		color: #009cb4;
+	}
+}
+
+.contacts-address {
+	font-size: 16px;
+	line-height: 22px;
+	font-style: normal;
+	display: block;
+	margin: 0;
+	padding: 37px 0;
+	margin: 0 0 25px;
+	@include breakpoint(md) {
+		font-size: 20px;
+	}
+}
+
+.contacts-btn {
+	font: 400 14px/1 'Proxima Nova', Helvetica, Arial, sans-serif;
+	border: 1px solid #009CB4;
+	background: #009CB4;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px 14px;
+	border-radius: 23px;
+	transition: .25s;
+	height: 46px;
+	&:hover {
+		text-decoration: none;
+		color: #fff;
+		background: #00B2B4;
+		border-color: #00B2B4;
+	}
+	&:active {
+
+	}
+}

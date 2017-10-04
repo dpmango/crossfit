@@ -1,0 +1,100 @@
+// --------------------------------------------------------------------------
+// Request
+// --------------------------------------------------------------------------
+
+.request {
+	position: relative;
+	background: #fff;
+	color: #2c2c2c;
+	padding: 25px 30px 50px;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		height: 140px;
+		box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
+		z-index: -1;
+	}
+	.btn {
+		white-space: nowrap;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	@include breakpoint(lg) {
+		padding: 45px 88px 50px 37px;
+	}
+
+}
+
+
+.request-heading {
+	font-size: 32px;
+	margin: 0 0 32px;
+	@include breakpoint(md) {
+		font-size: 32px;
+	}
+}
+
+
+.request--panel {
+	background: #222 url(../images/bg-request-panel.png) 0 0 no-repeat;
+	background-size: cover;
+	z-index: 10;
+	color: #fff;
+	margin: 0 0 50px;
+	padding: 55px 0;
+	&:after {
+		display: none;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(6, 6, 3, 0.11);
+		background-image: linear-gradient(-32deg, transparent 0%, rgba(0, 148, 252, 0.31) 52%, rgba(1, 192, 255, 0.53) 88%, rgba(0, 210, 255, 0.6) 100%);
+		z-index: -1;
+	}
+	.request-heading {
+		font-size: 34px;
+		margin: 0 0 20px;
+	}
+	@include breakpoint(md) {
+		
+		.request-heading {
+			font-size: 54px;
+		}
+	}
+	@include breakpoint(lg) {
+		margin-top: 210px;
+		padding: 55px 0 105px;
+	}
+}
+
+.request-obj {
+	display: none;
+	@include breakpoint(lg) {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		background: url(../images/bg-request-obj.png) 0 0 no-repeat;
+		width: 909px;
+		height: 629px;
+		margin: 0;
+	}
+	@include breakpoint(xl) {
+		margin: 0 0 0 115px;
+	}
+}
+
+.request-form {
+	max-width: 900px;
+}

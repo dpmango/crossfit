@@ -1,0 +1,145 @@
+// --------------------------------------------------------------------------
+// Reviews
+// --------------------------------------------------------------------------
+
+
+.reviews {
+	padding: 30px 0 50px;
+}
+
+.reviews-heading {
+	margin: 0 0 62px;
+}
+
+.reviews-item {
+	background: #222222;
+	color: #fff;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0 0 30px;
+	@include breakpoint(lg) {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+
+.reviews-carousel {
+	.owl-nav {
+		position: absolute;
+		bottom: -17px;
+		right: 10px;
+		display: flex;
+	}
+	.owl-prev, .owl-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 3px;
+		background: #FFFFFF;
+		margin: 0 5px;
+		transition: .25s;
+		&:hover {
+			background: #009CB4;
+			color: #fff;
+		}
+	}
+}
+
+.reviews-image {
+	margin: 0;
+	max-height: 368px;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	&:before {
+		content: '';
+		float: left;
+		padding: 105% 0 0;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		min-height: 100%;
+		// object-fit: cover;
+		// object-position: center 0;
+	}
+}
+
+.reviews-mark {
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 14px;
+	line-height: 38px;
+	text-transform: uppercase;
+	background: #009CB4;
+	color: #fff;
+	z-index: 10;
+	padding: 0 20px;
+	border-radius: 20px;
+	text-align: center;
+	min-width: 70px;
+}
+
+.reviews-desc {
+	padding: 24px 18px 26px;
+}
+
+.reviews-title {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font: 700 28px/1 'Bebas Neue', Helvetica, Arial, sans-serif;
+	margin: 0 5px 16px 0;
+	padding: 0 0 8px;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		right: 0;
+		border-bottom: 4px solid #009CB4;
+	}
+	@include breakpoint(lg) {
+		font-size: 38px;
+	}
+}
+
+.reviews-social {
+	margin: 0 0 16px;
+	padding: 4px 0;
+	list-style: none;
+	display: inline-flex;
+	align-items: center;
+}
+
+.reviews-social-link {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: #0D6BD4;
+	border-radius: 50%;
+	color: #fff;
+	text-decoration: none;
+	transition: .25s;
+	margin: 0 5px;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		background: #009CB4;
+	}
+}
+
+.reviews-text {
+	margin: 0;
+	color: #b0b0b0;
+}

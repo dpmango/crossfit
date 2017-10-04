@@ -1,0 +1,85 @@
+// --------------------------------------------------------------------------
+// Faq
+// --------------------------------------------------------------------------
+
+.faq {
+	padding: 50px 0 90px;
+}
+
+.faq-heading {
+	margin: 0 0 54px;
+}
+
+.faq-accordion {
+	font-size: 18px;
+	line-height: 32px;
+	dt {
+		display: block;
+		position: relative;
+		font-size: 18px;
+		line-height: 30px;
+		font-weight: 700;
+		padding: 0 0 0 50px;
+		text-transform: uppercase;
+		cursor: pointer;
+		margin: 0 0 39px;
+		transition: .25s;
+		&:hover {
+			.faq-accordion-toggle {
+				background: #00B2B4;
+			}
+			color: #00B2B4;
+		}
+		&.is-active {
+			.faq-accordion-toggle:before {
+				transform: rotate(90deg);
+			}
+		}
+	}
+	dd {
+		position: relative;
+		top: -34px;
+		margin: 0;
+		padding: 0 0 0 50px;
+		color: #757575;
+		display: none;
+		letter-spacing: -0.2px;
+	}
+}
+
+.faq-accordion-toggle {
+	display: block;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #009CB4;
+	border-radius: 50%;
+	transition: .25s;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 13px;
+		height: 3px;
+		border-radius: 3px;
+		background: #fff;
+		margin: -1px 0 0 -6px;
+	}
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 3px;
+		height: 13px;
+		border-radius: 3px;
+		background: #fff;
+		margin: -6px 0 0 -1px;
+		transition: inherit;
+	}
+}

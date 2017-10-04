@@ -1,0 +1,15 @@
+// --------------------------------------------------------------------------
+// Links
+// --------------------------------------------------------------------------
+
+.link-dashed {
+	transition: .25s;
+	color: #009cb4;
+    text-decoration: none;
+    border-bottom: 1px dotted #009cb4;
+    &:hover {
+    	color: #00B2B4;
+    	border-color: #00B2B4;
+    	text-decoration: none;
+    }
+}

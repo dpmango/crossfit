@@ -1,0 +1,56 @@
+// --------------------------------------------------------------------------
+// Info
+// --------------------------------------------------------------------------
+
+.info {
+	background: #000 url(../images/bg-info.jpg) center center no-repeat;
+	background-size: cover;
+	color: #fff;
+	padding: 50px 0 0;
+	margin: 0 0 125px;
+	.request {
+		top: 95px;
+		margin: -65px 0 0;
+		max-width: 1024px;
+	}
+	@include breakpoint(md) {
+		padding: 100px 0 0;
+		margin: 0 0 175px;
+	}
+}
+
+.info-heading {
+	margin: 0 0 10px;
+}
+
+.info-caption {
+	margin: 0 0 58px;
+}
+
+.info-item {
+	margin: 0 0 40px;
+}
+
+.info-item-title {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font-size: 28px;
+	line-height: 38px;
+	margin: 0;
+	padding: 15px 0 0;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 80%;
+		height: 4px;
+		background-color: #009cb4;
+	}
+}
+
+.info-item-text {
+	margin: 0;
+}

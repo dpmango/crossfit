@@ -1,0 +1,93 @@
+// --------------------------------------------------------------------------
+// Effective
+// --------------------------------------------------------------------------
+
+.effective {
+	position: relative;
+	z-index: 1;
+	padding: 50px 0;
+	// background: radial-gradient(ellipse at center, rgba(234,247,249,0.65) 0%,rgba(#000,0) 100%);
+	
+}
+
+.effective-obj {
+	display: block;
+	background: url(../images/bg-effective.png) 0 0 no-repeat;
+	width: 1374px;
+	height: 979px;
+	position: absolute;
+	top: -40px;
+	right: 0;
+	z-index: -1;
+}
+
+.effective-heading {
+	margin: 0 0 40px;
+}
+
+.effective-list {
+	margin: 0 -11px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	& > li {
+		padding: 0 11px;
+		margin: 0 0 22px;
+		width: 100%;
+	}
+	@include breakpoint(sm) {
+		& > li {
+			width: 50%;
+		}
+	}
+	@include breakpoint(md) {
+		& > li {
+			width: 33.333%;
+		}
+	}
+	@include breakpoint(lg) {
+		& > li {
+			width: 20%;
+		}
+	}
+	
+}
+
+.effective-item {
+	position: relative;
+	background: #fff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	color: #757575;
+	padding: 12px 15px 32px;
+	// max-width: 210px;
+	width: 100%;
+	min-height: 100%;
+	margin: 0 auto;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 30px;
+		left: 0;
+		right: 0;
+		bottom: 10px;
+		box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
+		z-index: -1;
+	}
+}
+
+.effective-item-icon {
+	display: block;
+	margin: 0 0 10px;
+	height: 100px;
+	line-height: 100px;
+	color: #008BB4;
+}
+
+.effective-item-text {
+	margin: 0;
+}

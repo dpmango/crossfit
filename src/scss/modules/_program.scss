@@ -1,0 +1,209 @@
+// --------------------------------------------------------------------------
+// Program
+// --------------------------------------------------------------------------
+
+.program {
+	position: relative;
+	padding: 55px 0;
+	@include breakpoint(md) {
+		padding-top: 105px;
+	}
+}
+
+.program-obj {
+	display: block;
+	background: #fff url(../images/bg-program.jpg) center center no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 560px;
+	z-index: -1;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(6, 6, 3, 0.11);
+		background-image: linear-gradient(-32deg, transparent 0%, rgba(0, 148, 252, 0.31) 52%, rgba(1, 192, 255, 0.53) 88%, rgba(0, 210, 255, 0.6) 100%);
+	}
+}
+
+.program-heading {
+	color: #fff;
+	margin: 0 0 50px;
+	min-height: 120px;
+}
+
+.program-tabs {
+	position: relative;
+	background: #fff;
+	color: #2c2c2c;
+	padding: 20px 40px;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		bottom: 10px;
+		left: 0;
+		right: 0;
+		height: 140px;
+		box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
+		z-index: -1;
+	}
+	@include breakpoint(md) {
+		padding: 20px 40px;
+	}
+}
+
+.program-tabs-menu {
+	margin: 0 -5px -10px;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	& > li {
+		padding: 0 5px 10px;
+		width: 50%;
+		&.is-active .program-tabs-btn {
+			background: #009CB4;
+			color: #fff;
+			font-weight: 700;
+			box-shadow: 0 8px 32px rgba(#0088b4,0.53);
+		}
+	}
+	@include breakpoint(sm) {
+		& > li {
+			width: 33.333%;
+		}
+	}
+	@include breakpoint(md) {
+		& > li {
+			width: 14.28%;
+		}
+	}
+}
+
+.program-tabs-btn {
+	transition: .25s;
+	display: block;
+	font-size: 16px;
+	line-height: 29px;
+	background: #E1EBED;
+	padding: 8px 20px 12px;
+	text-align: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	&:hover {
+		background: #00B2B4;
+		color: #fff;
+	}
+}
+
+.program-tabs-panel {
+	position: fixed;
+	opacity: 0;
+	visibility: hidden;
+	transition: .25s;
+	&.is-active {
+		position: relative;
+		visibility: visible;
+		opacity: 1;
+	}
+	@include breakpoint(md) {
+		min-height: 480px;
+	}
+}
+
+.program-carousel {
+	position: relative;
+
+	.owl-prev, .owl-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
+		border-radius: 3px;
+		width: 56px;
+		position: absolute;
+		top: 236px;
+		height: 56px;
+		color: #2C2C2C;
+		transition: .25s;
+		&:hover {
+			background-color: #009cb4;
+			color: #fff;
+		}
+		&.disabled {
+			opacity: 0;
+			cursor: default;
+		}
+	}
+	.owl-prev {
+		left: -68px;
+	}
+	.owl-next {
+		right: -68px;
+	}
+}
+
+
+.program-day {
+	font-size: 14px;
+	line-height: 18px;
+	padding: 15px 0;
+	@include breakpoint(lg) {
+		padding: 15px 30px 15px 40px;
+	}
+	
+}
+
+.program-day-mark {
+	text-transform: uppercase;
+	font-weight: 700;
+	display: block;
+	margin: 0 0 8px;
+}
+
+.program-day-title {
+	display: block;
+	font-size: 28px;
+	line-height: 38px;
+	margin: 0 0 10px;
+	text-transform: uppercase;
+}
+
+.program-day-time {
+	display: block;
+	font: 700 18px/28px 'Bebas Neue', Helvetica, Arial, sans-serif;
+	margin: 0 0 10px;
+}
+
+.program-day-info {
+	margin: 0;
+	dt {
+		display: block;
+		font: 700 18px/28px 'Bebas Neue', Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		margin: 0 0 5px;
+	}
+	dd {
+		margin: 0 0 20px;
+	}
+}
+
+.program-day-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	color: #757575;
+	& >  li {
+		margin: 0 0 10px;
+	}
+}

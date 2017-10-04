@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+
+body {
+    font: 400 16px/1.777 'Proxima Nova', Helvetica, Arial, sans-serif;
+    color: #2c2c2c;
+    @include breakpoint(md) {
+        font-size: 18px;
+    }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    line-height: 1.148;
+    margin: 0 0 25px;
+}
+
+h1 {
+    font-size: 34px;
+    @include breakpoint(md) {
+        font-size: 54px;
+    }
+}
+
+h2 {
+    font-size: 34px;
+    @include breakpoint(md) {
+        font-size: 54px;
+    }
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 14px;
+}
+
+p {
+    margin: 0 0 45px;
+}
+
+
+figure {
+    margin: 0 0 55px;
+}
+
+img {
+    max-width: 100%;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 25px 0;
+}
+
+blockquote {
+    display: block;
+    font-size: 14px;
+    line-height: 26px;
+    font-style: normal;
+    color: #757575;
+    margin: 0 0 45px;
+    padding: 0 0 0 50px;
+    position: relative;
+    &:after {
+        @include sprite($icon-blockquote);
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+}
+
+time {
+    color: #757575;
+    font-size: 16px;
+    margin: 0 0 10px;
+    display: inline-block;
+}
+
+a {
+    color: #009cb4;
+    text-decoration: underline;
+    &:hover {
+        color: #0f85c7;
+        text-decoration: underline;
+    }
+}
+
+mark {
+    background: none;
+    color: #009cb4;
+}
+
+
+label {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 0 5px;
+}

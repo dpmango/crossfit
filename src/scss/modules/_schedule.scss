@@ -1,0 +1,183 @@
+// --------------------------------------------------------------------------
+// Schedule
+// --------------------------------------------------------------------------
+
+.schedule {
+	background: #222;
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	padding: 50px 0; 
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: linear-gradient(68deg, #0088b4 0%, #222 100%, #222 100%);
+		opacity: 0.1;
+		z-index: -1;
+	}
+	@include breakpoint(md) {
+		padding: 80px 0 125px;
+	}
+}
+
+.schedule-heading {
+	margin: 0 0 7px;
+}
+
+.schedule-caption {
+	font-size: 18px;
+	margin: 0 0 48px;
+	span {
+		margin: 0 7px;
+	}
+	@include breakpoint(md) {
+		span {
+			margin: 0 22px;
+		}
+	}
+}
+
+.schedule-table-scroll {
+	overflow-x: auto;
+	padding: 0 0 20px;
+	@include breakpoint(lg) {
+		overflow: visible;
+	}
+}
+
+.schedule-table {
+	width: 100%;
+	border-spacing: 4px 8px;
+	text-align: center;
+	// table-layout: fixed;
+	margin: 0;
+	thead th:first-child {
+		background: #009CB4;
+		color: #fff;
+	}
+	th, td {
+		vertical-align: middle;
+		transition: .25s;
+		&:first-child {
+			width: 100px;
+		}
+	}
+	th {
+		border-color: #151515;
+		box-shadow: none;
+		background: #151515;
+		font: 700 18px/21px 'Bebas Neue', Helvetica, Arial, sans-serif;
+		padding: 12px;
+		
+	}
+	td {
+		border: 1px solid #313131;
+		padding: 12px 5px;
+		height: 80px;
+		white-space: nowrap;
+		
+	}
+	thead th {
+		// &.is-hightlight,
+		&:hover {
+			background: #009CB4;
+			color: #fff;
+		}
+	}
+	tbody td {
+		// &.is-hightlight,
+		&:hover {
+			background: #1C353A;
+			border-color: #1C353A;
+		}
+	}
+
+}
+
+
+.schedule-trainer {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	white-space: nowrap;
+	font-size: 14px;
+	line-height: 20px;
+	color: #888888;
+	text-align: center;
+	margin: 0 4px;
+	cursor: pointer;
+	b {
+		display: block;
+		font-size: 16px;
+		color: #ffffff;
+	}
+	&:hover .schedule-tooltip {
+		opacity: 1; visibility: visible;
+		transform: translate3d(-50%,0,0);
+	}
+}
+
+.schedule-tooltip {
+	background: #fff;
+	box-shadow: 3.5px 19.7px 32px rgba(4, 17, 21, 0.53);
+	padding: 12px 20px 22px;
+	text-align: center;
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translate3d(-50%,-10px,0);
+	min-width: 186px;
+	transition: .25s;
+	opacity: 0; visibility: hidden;
+	backface-visibility: hidden;
+	display: none;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-top: 7px solid #fff;
+		margin: 0 0 0 -7px;
+	}
+	@include breakpoint(md) {
+		display: block;
+	}
+}
+
+.schedule-tooltip-type {
+	display: block;
+	font: 700 18px/1 'Bebas Neue', Helvetica, Arial, sans-serif;
+	color: #2c2c2c;
+	margin: 0 0 10px;
+}
+
+.schedule-tooltip-photo {
+	display: block;
+	width: 70px;
+	height: 70px;
+	background-color: #8f8f8f;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 8px;
+	img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.schedule-tooltip-name {
+	display: block;
+	margin: 0;
+	font-size: 16px;
+	color: #888888;
+}

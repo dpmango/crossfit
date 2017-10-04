@@ -1,0 +1,1506 @@
+mixin sprite(svg_id)
+    svg(class=svg_id)
+      use(xlink:href= 'sprites/sprite.svg#' + svg_id)
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(name="theme-color" content="#000")
+        meta(name="format-detection" content="telephone=no")
+        meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+
+        title CrossFit
+
+        link(rel="stylesheet" href="css/app.min.css")
+
+
+body
+
+    .popup.mfp-hide#popup-callback
+        form(action="#")
+            button.popup-close(data-mfp-close)
+                +sprite('icon-close')
+            h2.popup-heading Заказать Обратный звонок
+            p.popup-text Вам скоро позвонят
+            .popup-form
+                input(type="text", placeholder="Ваше имя").app-input
+                input(type="tel", placeholder="Телефон").app-input.js-mask-phone
+                a(href="#popup-success", data-mfp).btn.btn-red.btn-block Заказать
+
+    .popup.mfp-hide#popup-success
+        form(action="#")
+            button.popup-close(data-mfp-close)
+                +sprite('icon-close')
+            figure.popup-image
+                img(src="images/img-success.png", alt="")
+            h2.popup-heading Спасибо! Заявка приянта
+            p.popup-text Вам скоро позвонят и запишут на первую тренировку. Это бесплатно.
+
+    .popup.popup-article.mfp-hide#popup-article
+        button.popup-close(data-mfp-close)
+            +sprite('icon-close')
+
+        article.article
+
+            time
+                +sprite('icon-date')
+                | 13 сентября 2017
+
+            h1 Название Новости
+
+            p <strong>CrossFit 19.05</strong> — аффилированный международной ассоциацией клуб премиум-класса у метро «Улица 1905 года». <br>Клуб оборудован профессиональными тренажерами и снарядами Yousteel.
+
+            .article-carousel.owl-carousel
+                img(src="images/img-article-1.jpg", alt="")
+                img(src="images/img-article-1.jpg", alt="")
+                img(src="images/img-article-1.jpg", alt="")
+                img(src="images/img-article-1.jpg", alt="")
+                
+
+            p Кроссфит — вид функциональной тренировки, которая способствует развитию основных физических качеств. Это естественное увеличение мышечной силы, выносливости, всех способностей тела с помощью упражнений из разных видов спорта. Кроссфит — вызов себе, преодоление всех «боюсь» и «не могу». При этом в кроссфите есть уровни нагрузки scaled, rx, rx+ («упрощенный», «обычный», «усложненный» уровни заданий), которую тренер дает атлетам на основе анализа базовой подготовки каждого участника командной тренировки.
+
+            blockquote Кроссфит — вид функциональной тренировки, которая способствует развитию основных физических качеств. Это естественное увеличение мышечной силы, выносливости, всех способностей тела с помощью упражнений из разных видов спорта. Кроссфит — вызов себе, преодоление всех «боюсь» и «не могу». При этом в кроссфите есть уровни нагрузки scaled, rx, rx+ («упрощенный», «обычный», «усложненный» уровни заданий), которую тренер дает атлетам на основе анализа базовой подготовки каждого участника командной тренировки.
+
+            p Кроссфит — вид функциональной тренировки, которая способствует развитию основных физических качеств. Это естественное увеличение мышечной силы, выносливости, всех способностей тела с помощью упражнений из разных видов спорта. Кроссфит — вызов себе, преодоление всех «боюсь» и «не могу». При этом в кроссфите есть уровни нагрузки scaled, rx, rx+ («упрощенный», «обычный», «усложненный» уровни заданий), которую тренер дает атлетам на основе анализа базовой подготовки каждого участника командной тренировки.
+
+            ul
+                li Зал кроссфита (190 кв.м) включает в себя кардиозону, 
+                li Действительно усиленный пол
+                li Две функциональные рамы, канаты, кольца и многое другое. 
+                li Зал единоборств (50 кв.м.). Зал стретчинга 30 (кв.м).
+            
+            .article-scroll
+                table
+                    thead
+                        tr
+                            th Понедельник
+                            th Вторник
+                            th Среда
+                            th Четверг
+                            th Пятница
+                    tbody
+                        tr
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит 
+                        tr
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит 
+                        tr
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит 
+                        tr
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит 
+                        tr
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит
+                            td Кроссфит 
+
+            p
+                a(href="#").link-dashed Зал кроссфита (190 кв.м) включает в себя кардиозону,
+
+            .article-ctrl
+                a(href="#", data-mfp-close).article-close
+                    +sprite('icon-close')
+                    | Закрыть
+                a(href="#").article-next
+                    | Следующая Новость
+                    +sprite('icon-right')
+
+
+
+    .app
+        
+        header.header
+            .container-fluid
+                .row.align-items-center
+                    .col-md-2.col-lg-4
+                        .logo
+                            img(src="images/logo.png", alt="CrossFit")
+                            p.logo-text Кроссфит клуб <br> премиум-класса
+                    .col-md-4.col-lg-3
+                        nav.social
+                            a(href="#").social-link
+                                +sprite('icon-social-fb')
+                            a(href="#").social-link
+                                +sprite('icon-social-vk')
+                            a(href="#").social-link
+                                +sprite('icon-social-od')
+                            a(href="#").social-link
+                                +sprite('icon-social-im')
+                            a(href="#").social-link
+                                +sprite('icon-social-yt')
+                    .col-md-6.col-lg-5
+                        p.call
+                            a(href="#").call-phone
+                                +sprite('icon-phone')
+                                | 8 (800) 800-80-80
+
+                            a(href="#popup-callback", data-mfp).call-btn Обратный звонок
+                
+                
+            nav.nav
+                button.nav-btn
+                    span
+                    span
+                    span
+                .nav-dropdown
+                     .container-fluid
+                        ul.nav-menu
+                            - var menu = ['Кроссфит', 'Клуб', 'Тренеры', 'Расписание и цены', 'Галерея', 'Отзывы', 'Вопросы']
+                                each item in menu
+                                    li
+                                        a(href="#").nav-link=item
+
+        
+        main.main
+
+            section.begin
+                .begin-video
+                    video(src="video/bg-begin.mp4", poster="images/bg-begin-poster.png", autoplay, muted, loop)
+
+                .container-fluid
+                    h1.begin-heading Стань сильным, выносливым, уверенным в себе. <br> Стань лучше в Клубе 19.05!
+                    .row
+                        .col-md-5
+                            ul.begin-list
+                                li Клуб аффилирован CrossFit, Inc.
+                                li Профессиональное оборудование.
+                                li Оборудованная площадка для занятий на улице.
+                                li Персональные тренировки.
+                                li Консультации диетолога.
+                                li Кафе здорового питания.
+                                li Сауна, массаж.
+                        .col-md-7
+                            .begin-news
+                                h3.begin-news-heading Новости
+                                ul.begin-news-list
+                                    li
+                                        a(href="#popup-article", data-mfp).begin-news-link
+                                            u Осенние акции в CrossFit 19.05
+                                        time.begin-news-date 19.11.17
+                                    li
+                                        a(href="#popup-article", data-mfp).begin-news-link
+                                            u Осенние акции в CrossFit 19.05
+                                        time.begin-news-date 19.11.17
+                    .request
+                        form(action="#")
+                            h2.request-heading Попробуйте кроссфит!  Первая тренировка <mark>бесплатно.</mark> 
+                            .row.row-offset-14
+                                .col-md-4
+                                    input(type="text", placeholder="Ваше имя").app-input
+                                .col-md-4
+                                    input(type="tel", placeholder="Телефон ").app-input.js-mask-phone
+                                .col-md-4
+                                    button.btn.btn-red.btn-block Отправить заявку
+
+            section.adv
+                .container-fluid
+
+                    ul.adv-list
+                        li
+                            h2.adv-heading <mark>5</mark> преимуществ <br> кроссфит
+                            .adv-item
+                                figure.adv-item-image
+                                    img(src="images/img-adv-1.png", alt="")
+                                h3.adv-item-title Интересные <br>разнообразные тренировки
+                        li
+                            .adv-item
+                                figure.adv-item-image
+                                    img(src="images/img-adv-2.png", alt="")
+                                h3.adv-item-title Динамичные тренировки с учетом физической подготовки каждого
+                        li
+                            .adv-item
+                                figure.adv-item-image
+                                    img(src="images/img-adv-3.png", alt="")
+                                h3.adv-item-title Полезно <br> для здоровья
+                        li
+                            .adv-item
+                                figure.adv-item-image
+                                    img(src="images/img-adv-4.png", alt="")
+                                h3.adv-item-title Подходит <br> каждому
+                        li
+                            .adv-item
+                                figure.adv-item-image
+                                    img(src="images/img-adv-5.png", alt="")
+                                h3.adv-item-title Работа в команде
+
+            section.effective
+                .effective-obj
+                .container-fluid
+                    h2.effective-heading Что такое эффективный кроссфит
+                    ul.effective-list
+                        li
+                            .effective-item
+                                figure.effective-item-icon
+                                    +sprite('icon-effective-1')
+                                p.effective-item-text Регулярные <br> групповые занятия
+                        li
+                            .effective-item
+                                figure.effective-item-icon
+                                    +sprite('icon-effective-2')
+                                p.effective-item-text Индивидуальная схема питания
+                        li
+                            .effective-item
+                                figure.effective-item-icon
+                                    +sprite('icon-effective-3')
+                                p.effective-item-text Персональные тренировки
+                        li
+                            .effective-item
+                                figure.effective-item-icon
+                                    +sprite('icon-effective-4')
+                                p.effective-item-text Расслабление <br>и восстановление
+                        li
+                            .effective-item
+                                figure.effective-item-icon
+                                    +sprite('icon-effective-5')
+                                p.effective-item-text Повторять 3-5 раз <br>в неделю
+
+            section.given
+                .container-fluid
+                    h2.given-heading Что дают занятия
+                    .row
+                        .col-lg-4
+                            .given-item
+                                figure.given-item-image
+                                    img(src="images/img-given-1.png", alt="")
+                                h3.given-item-title Для мужчин
+                                ul.given-item-list
+                                    li Красивые мышцы
+                                    li Повышение общей и силовой выносливости 
+                                    li Жиросжигание
+                                    li Повышение жизненного тонуса 
+                                    li Уверенность в себе
+
+                        .col-lg-4
+                            .given-item
+                                figure.given-item-image
+                                    img(src="images/img-given-2.png", alt="")
+                                h3.given-item-title Для девушек
+                                ul.given-item-list
+                                    li Идеальные пресс ноги и ягодицы
+                                    li Локальное жиросжигание
+                                    li Идеальные ноги, ягодицы и пресс
+                                    li Хорошее настроение
+
+                        .col-lg-4
+                            .given-item
+                                figure.given-item-image
+                                    img(src="images/img-given-3.png", alt="")
+                                h3.given-item-title Для детей
+                                ul.given-item-list
+                                    li Правильная осанка
+                                    li Укрепление мышечного <br> корсета
+                                    li Выносливость
+                                    li Постановка техники <br> упражнений
+                                    li Обучение работе в команде
+
+            section.process
+                .container-fluid
+
+                    h2.process-heading Как проходит занятие 
+
+                    ul.process-list
+                        li
+                            .process-item
+                                .process-item-image
+                                    img(src="images/img-process-1.png", alt="")
+                                .process-item-desc
+                                    h3.process-item-title
+                                        span.process-item-title-text разминка
+                                        mark.process-item-time  5-10 минут   
+                                    p.process-item-text Готовим мышцы и сердечно-сосудистую <br> систему к  тренировке. 
+
+
+                        li
+                            .process-item
+                                .process-item-image
+                                    img(src="images/img-process-2.png", alt="")
+                                .process-item-desc
+                                    h3.process-item-title
+                                        span.process-item-title-text Отработка техники силовой части
+                                        mark.process-item-time  5 минут   
+                                    p.process-item-text Учимся правильно и безопасно делать <br> силовое упражнение дня. 
+
+                        li
+                            .process-item
+                                .process-item-image
+                                    img(src="images/img-process-3.png", alt="")
+                                .process-item-desc
+                                    h3.process-item-title
+                                        span.process-item-title-text Силовая часть
+                                        mark.process-item-time 10 минут   
+                                    p.process-item-text Выполняем силовой комплекс или упражнение
+
+                        li
+                            .process-item
+                                .process-item-image
+                                    img(src="images/img-process-4.png", alt="")
+                                .process-item-desc
+                                    h3.process-item-title
+                                        span.process-item-title-text Брифинг к комплексу и подготовка оборудования
+                                    p.process-item-text Готовимся к основному комплексу дня. <br>Индивидуально настраиваем оборудование.
+
+
+                        li
+                            .process-item
+                                .process-item-image
+                                    img(src="images/img-process-5.png", alt="")
+                                .process-item-desc
+                                    h3.process-item-title
+                                        span.process-item-title-text WOD – основной комплекс.
+                                        mark.process-item-time 20 минут   
+                                    p.process-item-text Выполняем тренировку дня
+
+                        li
+                            .process-item
+                                .process-item-image
+                                    img(src="images/img-process-6.png", alt="")
+                                .process-item-desc
+                                    h3.process-item-title
+                                        span.process-item-title-text Заминка, растяжка  
+                                    p.process-item-text Убираем оборудование. Делаем заминку для правильного эффекта, растягиваемся (выполняем упражнение на гибкость), чтобы быстрее восстановиться после занятия. 
+
+            section.program
+                .program-obj
+                .container-fluid
+                    h2.program-heading Из чего будет состоять тренировки <br> на ближайшие <mark>7 дней</mark>
+                    .program-tabs
+
+                        .program-tabs-panel.is-active
+                            .program-carousel.owl-carousel
+                                .program-day
+                                    mark.program-day-mark День 1
+                                    h3.program-day-title ТЕХНИКА <br> ПРЫЖКИ НА ТУМБУ
+                                    b.program-day-time ЕМОМ - 12 мин 
+                                    dl.program-day-info
+                                        dt RX
+                                        dd
+                                            ul.program-day-list
+                                                li 1 - 40с Строгих подтягиваний
+                                                li 2 - 40c Прыжки на тумбу 60/50
+                                                li 3 - 40c Заходы на стену
+                                        dt RX+
+                                        dd
+                                            ul.program-day-list
+                                                li 1 - 40c Строгих подтягиваний до груди
+                                                li 2 - 40с Прыжки на тумбу 60/50
+                                                li 3 - 40c Строгие отжимания в стойке на руках
+
+                                .program-day
+                                    mark.program-day-mark День 1
+                                    h3.program-day-title ВЗЯТИЕ НА ГРУДЬ <br> В СТОЙКУ ТОЛЧОК
+                                    b.program-day-time 6х2+1
+                                    dl.program-day-info
+                                        dt 25-20-15-10-5
+                                        dd Cal Гребли
+                                        dt После каждого раунда гребли 1 раунд Синди
+                                        dd
+                                            ul.program-day-list
+                                                li - 5 Подтягиваний
+                                                li - 10 Отжиманий
+                                                li - 15 Приседаний
+                                .program-day
+                                    mark.program-day-mark День 1
+                                    h3.program-day-title 3 ОТЖИМАНИЯ В СТОЙКЕ НА РУКАХ С ДЕФИЦИТОМ
+                                    b.program-day-time ЕМОМ - 10 min / 3 РАУНДА (15мин)
+                                    dl.program-day-info
+                                        dt RX
+                                        dd
+                                            ul.program-day-list
+                                                li - 300м Бег
+                                                li - 5 Становых тяг 60/40
+                                                li - 15 Бёрпи фронтально черезштангу
+                                        dt RX+
+                                        dd
+                                            ul.program-day-list
+                                                li - 300м Бег
+                                                li - 5 Становых тяг 80/55
+                                                li - 15 Бёрпи фронтально черезштангу
+                                .program-day
+                                    mark.program-day-mark День 1
+                                    h3.program-day-title ВЗЯТИЕ НА ГРУДЬ <br> В СТОЙКУ ТОЛЧОК
+                                    b.program-day-time 6х2+1
+                                    dl.program-day-info
+                                        dt 25-20-15-10-5
+                                        dd Cal Гребли
+                                        dt После каждого раунда гребли 1 раунд Синди
+                                        dd
+                                            ul.program-day-list
+                                                li - 5 Подтягиваний
+                                                li - 10 Отжиманий
+                                                li - 15 Приседаний
+                                .program-day
+                                    mark.program-day-mark День 1
+                                    h3.program-day-title 3 ОТЖИМАНИЯ В СТОЙКЕ НА РУКАХ С ДЕФИЦИТОМ
+                                    b.program-day-time ЕМОМ - 10 min / 3 РАУНДА (15мин)
+                                    dl.program-day-info
+                                        dt RX
+                                        dd
+                                            ul.program-day-list
+                                                li - 300м Бег
+                                                li - 5 Становых тяг 60/40
+                                                li - 15 Бёрпи фронтально черезштангу
+                                        dt RX+
+                                        dd
+                                            ul.program-day-list
+                                                li - 300м Бег
+                                                li - 5 Становых тяг 80/55
+                                                li - 15 Бёрпи фронтально черезштангу
+                   
+                        .program-tabs-panel День 2
+                        .program-tabs-panel День 3
+                        .program-tabs-panel День 4
+                        .program-tabs-panel День 5
+                        .program-tabs-panel День 6
+                        .program-tabs-panel День 7
+
+                        ul.program-tabs-menu
+                            li.is-active
+                                span.program-tabs-btn День 1
+                            li
+                                span.program-tabs-btn День 2
+                            li
+                                span.program-tabs-btn День 3
+                            li
+                                span.program-tabs-btn День 4
+                            li
+                                span.program-tabs-btn День 5
+                            li
+                                span.program-tabs-btn День 6
+                            li
+                                span.program-tabs-btn День 7
+
+            section.about
+
+                .container-fluid
+                    h2.about-heading О клубе
+                    p <strong>CrossFit 19.05</strong> — аффилированный международной ассоциацией клуб премиум-класса у метро «Улица 1905 года».  Клуб оборудован профессиональными тренажерами и снарядами Yousteel.
+
+                .about-photos
+                    .about-photos-item
+                        img(src="images/photo-about-1.jpg", alt="")
+                    .about-photos-item
+                        img(src="images/photo-about-2.jpg", alt="")
+                    .about-photos-item
+                        img(src="images/photo-about-3.jpg", alt="")
+                    .about-photos-item
+                        img(src="images/photo-about-4.jpg", alt="")
+                    .about-photos-item
+                        img(src="images/photo-about-5.jpg", alt="")
+
+                .container-fluid
+                    p При строительстве клуба мы очень старались сделать спортивную зону максимально комфортной. В наших залах много дневного света, всегда есть чем дышать, прекрасная система вентиляции. Мы предусмотрели шумоизоляцию таким образом, чтобы активно заниматься тяжелой атлетикой, используя свободные веса, в любое время.
+                    .row
+                        .col-md-6
+                            ul.about-list
+                                li
+                                    +sprite('icon-check')
+                                    | Зал кроссфита (190 кв.м) включает в себя кардиозону, 
+                                li
+                                    +sprite('icon-check')
+                                    | Действительно усиленный пол
+                                li
+                                    +sprite('icon-check')
+                                    | Две функциональные рамы, канаты, кольца и многое другое. 
+                                li
+                                    +sprite('icon-check')
+                                    | Зал единоборств (50 кв.м.). Зал стретчинга 30 (кв.м).
+                            figure.about-image
+                                img(src="images/img-about-1.jpg", alt="")
+                        .col-md-6
+                            figure.about-image
+                                img(src="images/img-about-2.jpg", alt="")
+                            p В клубе находится кафе, где Вы можете вкусно и полезно поесть или выпить спортивный коктейль. Массаж и сауна позволят расслабиться и лучше восстановиться после тяжелого дня.
+                            a(href="#").btn.btn-turq Смотреть все фото
+
+            section.hall
+                .container-fluid
+
+                    .row
+                        .col-lg-4
+                            .hall-item
+                                figure.hall-item-image
+                                    img(src="images/img-hall-1.png", alt="")
+                                h3.hall-item-title Зал кроссфит
+                                ul.hall-item-list
+                                    li 200 кв м
+                                    li 2 функциональные рамы
+                                    li канаты, кольца
+                                    li кардиозона
+                                    li усиленный пол
+                        .col-lg-4
+                            .hall-item
+                                figure.hall-item-image
+                                    img(src="images/img-hall-2.png", alt="")
+                                h3.hall-item-title Зал единоборств 
+                                ul.hall-item-list
+                                    li Зал единоборств
+                                    li 65 кв м
+                                    li Татами
+                                    li Ринг
+                                    li Мягкие стены
+                                    li Груши
+                        .col-lg-4
+                            .hall-item
+                                figure.hall-item-image
+                                    img(src="images/img-hall-3.png", alt="")
+                                h3.hall-item-title Уличная площадка 
+                                ul.hall-item-list
+                                    li 200 кв м
+                                    li Резиновое покрытие
+                                    li Закрытая территория
+                                    li 2 функциональные рамы 
+                                    li Покрышки и многое другое
+
+            section.traning
+                .container-fluid
+                    h2.traning-heading Тренировки клуба
+                    dl.traning-accordion.js-accordion
+                        dt CrossFit Gymnastics
+                            +sprite('icon-down')
+                            img(src="images/img-traning-gymnastics.png", alt="")
+                        dd
+                            ul.traning-list
+                                li Закаляют характер.
+                                li Повышают уверенность в себе.
+                                li Дают навыки самообороны.
+
+                        dt Crossfit weightlifting
+                            +sprite('icon-down')
+                            img(src="images/img-traning-weightlifting.png", alt="")
+                        dd
+                            ul.traning-list
+                                li Закаляют характер.
+                                li Повышают уверенность в себе.
+                                li Дают навыки самообороны.
+
+                        dt Crossfit Stretching 
+                            +sprite('icon-down')
+                            img(src="images/img-traning-stretching.png", alt="")
+                        dd
+                            ul.traning-list
+                                li Закаляют характер.
+                                li Повышают уверенность в себе.
+                                li Дают навыки самообороны.
+
+                        dt Crossfit Barbell-less
+                            +sprite('icon-down')
+                            img(src="images/img-traning-barbell-less.png", alt="")
+                        dd
+                            ul.traning-list
+                                li Закаляют характер.
+                                li Повышают уверенность в себе.
+                                li Дают навыки самообороны.
+
+                        dt Crossfit Kids
+                            +sprite('icon-down')
+                            img(src="images/img-traning-kids.png", alt="")
+                        dd
+                            ul.traning-list
+                                li Закаляют характер.
+                                li Повышают уверенность в себе.
+                                li Дают навыки самообороны.
+
+            section.unique
+                .unique-obj
+                .container-fluid
+                    h2.unique-heading Уникальность CrossFit 19.05
+                    .row.justify-content-center
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-1')
+                                p.unique-item-text Площадка для занятий <br> на улице
+
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-2')
+                                p.unique-item-text Зона боевых искусств
+
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-3')
+                                p.unique-item-text Сауна
+
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-4')
+                                p.unique-item-text Программа массажа
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-5')
+                                p.unique-item-text Кафе
+
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-6')
+                                p.unique-item-text Парковка
+
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-7')
+                                p.unique-item-text Программы от новичка  <br> до профессионалов
+
+                        .col-sm-4.col-md-3
+                            .unique-item
+                                figure.unique-item-icon
+                                    +sprite('icon-unique-8')
+                                p.unique-item-text Удобное расположение
+
+            section.info
+                .container-fluid
+                    h2.info-heading У нас как дома 
+                    p.info-caption <strong>CrossFit 19.05</strong> — клуб, члены которого заботятся о своем здоровье. 
+                    .row
+                        .col-md-6
+                            .info-item
+                                h3.info-item-title Развитие для каждого
+                                p.info-item-text Занимайтесь в команде или с персональным тренером. <br> Мы формируем программы для каждого на основе вашей физической подготовки. Нагрузка будет возрастать индивидуально с учетом вашего прогресса.
+                        .col-md-6
+                            .info-item
+                                h3.info-item-title Релакс
+                                p.info-item-text После занятий можно расслабиться в сауне или на массаже. В нашем кафе готовят только полезные и вкусные блюда. 
+
+                    .request
+                        form(action="#")
+                            h2.request-heading Попробуйте кроссфит!  Первая тренировка <mark>бесплатно.</mark> 
+                            .row.row-offset-14
+                                .col-md-4
+                                    input(type="text", placeholder="Ваше имя").app-input
+                                .col-md-4
+                                    input(type="tel", placeholder="Телефон ").app-input.js-mask-phone
+                                .col-md-4
+                                    button.btn.btn-red.btn-block Отправить заявку
+
+            section.coach
+                .container-fluid
+                    h2.coach-heading Тренеры в <mark>CrossFit19.05</mark>
+                    p.coach-caption Имеют высшее образование в сфере физической культуры и спорта
+                    .row
+                        .col-md-4
+                            .coach-item
+                                figure.coach-item-image
+                                    img(src="images/img-coach-1.jpg", alt="")
+                                .coach-item-desc
+                                    h3.coach-item-title
+                                        u Имя тренера
+                                    p.coach-item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam 
+                                    dl.coach-item-accordion.js-accordion
+                                        dt Спецификация
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                                        dt Образование
+                                        dd Lorem ipsum dolor sit amet, consectetur 
+                                        dt Достижения
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                        .col-md-4
+                            .coach-item
+                                figure.coach-item-image
+                                    img(src="images/img-coach-1.jpg", alt="")
+                                .coach-item-desc
+                                    h3.coach-item-title
+                                        u Имя тренера
+                                    p.coach-item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam 
+                                    dl.coach-item-accordion.js-accordion
+                                        dt Спецификация
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                                        dt Образование
+                                        dd Lorem ipsum dolor sit amet, consectetur 
+                                        dt Достижения
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                        .col-md-4
+                            .coach-item
+                                figure.coach-item-image
+                                    img(src="images/img-coach-1.jpg", alt="")
+                                .coach-item-desc
+                                    h3.coach-item-title
+                                        u Имя тренера
+                                    p.coach-item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam 
+                                    dl.coach-item-accordion.js-accordion
+                                        dt Спецификация
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                                        dt Образование
+                                        dd Lorem ipsum dolor sit amet, consectetur 
+                                        dt Достижения
+                                        dd Lorem ipsum dolor sit amet, consectetur
+
+                    .coach-personal
+                        .coach-personal-obj
+                        .row
+                            .col-md-7
+                                h2.coach-personal-title Персональные тренировки
+                                p.coach-personal-text В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.  
+
+            section.schedule
+                .container-fluid
+                    h2.schedule-heading РАСПИСАНИЕ Тренировок
+                    p.schedule-caption Мы открыты по будням <mark>7:00 - 23:00</mark> <span>|</span> По выходным <mark>9:00 - 21:00</mark>
+                    .schedule-table-scroll
+                        table.schedule-table.js-table-hover
+                            thead
+                                tr
+                                    th
+                                        +sprite('icon-time')
+                                    th Понедельник
+                                    th Вторник
+                                    th Среда
+                                    th Четверг
+                                    th Пятница
+                                    th Суббота
+                                    th Воскресенье
+                            tbody
+                                tr
+                                    th 7:30
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                    td
+                                tr
+                                    th 9:00
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                    td
+                                tr
+                                    th 10:00
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td 
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                tr
+                                    th 12:00
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td 
+                                    td
+                                        span.schedule-trainer <b>CF Basic</b> Валерий
+                                    td
+                                tr
+                                    th 13:00
+                                    td
+                                        span.schedule-trainer
+                                            <b>Circuit training</b> Виталий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>Circuit training</b> Виталий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>Circuit training</b> Виталий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                tr
+                                    th 14:00
+                                    td
+                                        span.schedule-trainer
+                                            <b>Circuit training</b> Виталий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>Circuit training</b> Виталий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>Circuit training</b> Виталий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                tr
+                                    th 15:00
+                                    td
+                                    td(rowspan="2")
+                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                    td
+                                    td(rowspan="2")
+                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                    td
+                                    td
+                                    td(rowspan="2")
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                tr
+                                    th 15:30
+                                    td 
+                                    td
+                                    td
+                                    td(rowspan="3")
+                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                tr
+                                    th 16:00
+                                    td 
+                                    td
+                                    td
+                                    td
+                                    td
+                                    td
+                                tr
+                                    th 17:00
+                                    td 
+                                    td
+                                    td
+                                    td
+                                    td
+                                    td
+                                tr
+                                    th 18:00
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer <b>CF</b> Анна
+                                    td
+                                        span.schedule-trainer <b>CF</b> Анна
+                                    td
+                                        span.schedule-trainer <b>CF</b> Анна
+                                    td
+                                        span.schedule-trainer <b>CF</b> Анна
+                                    td
+                                    td
+                                tr
+                                    th 19:00
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer <b>CF</b> Анна
+                                        span.schedule-trainer <b>MMA</b> Руслан
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer <b>CF</b> Анна
+                                        span.schedule-trainer <b>MMA</b> Руслан
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                    td
+                                tr
+                                    th 20:00
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Яна
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                p.schedule-tooltip-name Имя тренера
+                                        span.schedule-trainer <b>MMA</b> Елена
+                                    td
+                                        span.schedule-trainer <b>CF</b> Виталий
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                    td
+                                tr
+                                    th 21:00
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                        span.schedule-trainer
+                                            <b>CF</b> Валерий
+                                            .schedule-tooltip
+                                                strong.schedule-tooltip-type Circuit training
+                                                figure.schedule-tooltip-photo
+                                                    img(src="images/img-photo-1.jpg", alt="")
+                                                p.schedule-tooltip-name Имя тренера
+                                    td
+                                    td
+
+            section.base
+                .container-fluid
+                    h2.base-heading Базовые абонементы
+                    .row
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 6 ЗАНЯТИЙ
+                                p.base-item-price 5 100 ₽
+                                small.base-item-one <b>850 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 10 ЗАНЯТИЙ
+                                p.base-item-price 6 800 ₽
+                                small.base-item-one <b>680 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 12 ЗАНЯТИЙ
+                                p.base-item-price 7 200 ₽
+                                small.base-item-one <b>600 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 72 ЗАНЯТИЙ
+                                p.base-item-price 39 600 ₽
+                                small.base-item-one <b>550 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 144 ЗАНЯТИЙ
+                                p.base-item-price 72 00 ₽
+                                small.base-item-one <b>500 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 15 ЗАНЯТИЙ ЧАСЫ OPEN
+                                p.base-item-price 9 000 ₽
+                                small.base-item-one <b>600 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 60 ЗАНЯТИЙ ЧАСЫ OPEN
+                                p.base-item-price 30 000 ₽
+                                small.base-item-one <b>500 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 4 занятия Boxing
+                                p.base-item-price 2 800 ₽
+                                small.base-item-one <b>700 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 8 занятий Boxing
+                                p.base-item-price 4 000 ₽
+                                small.base-item-one <b>500 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 3 занятия Тяжелая Атлетика
+                                p.base-item-price 3 000 ₽
+                                small.base-item-one <b>1 000 ₽</b> 1 ЗАНЯТИЕ
+                        .col-sm-6.col-md-4
+                            .base-item
+                                h3.base-item-title Базовый абонемент
+                                b.base-item-count 6 занятий Тяжелая Атлетика
+                                p.base-item-price 5 400 ₽
+                                small.base-item-one <b>900 ₽</b> 1 ЗАНЯТИЕ
+
+                    .base-more
+                        .row
+                            .col-md-7
+                                ul.base-more-list
+                                    li Разовое посещение <b>1 500 р.</b>
+                                    li Разовое посещение OPEN <b>1 000 р.</b>
+                                    li Разовое посещение OPEN  <b>800 р.</b>
+                                    li Персональная тренировка Team 2 (CF) <b>3 000 р.</b> (1500 руб. с человека)
+                                    li Персональная тренировка Team 3 (CF) <b>3 900 р.</b> (1300 руб. с человека)
+                                    li Клип-карта 10 персональных тренировок <b>18 000 руб.</b>
+                            .col-md-5
+                                ul.base-more-list
+                                    li Парковка <b>425 р.</b>
+                                    li Консультация диетолога <b>бесплатно.</b>
+                                    li Индивидуальная программа питания на 1 месяц <b>5 000 р.</b>
+                                p.base-more-caption Дополнительные занятия <b>400 р.</b> *(тяжелая атлетика, растяжка, гимнастика)<br>* - при наличии абонемента
+
+            section.unlimit
+                .container-fluid
+                    h2.unlimit-heading Безлимитные абонементы
+
+                    ul.unlimit-list
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-price 8 500 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 3 мес.
+                                p.unlimit-item-price 21 500 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 6 мес.
+                                p.unlimit-item-price 42 500 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 12 мес.
+                                p.unlimit-item-price 85 500 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text Утро-день <br> 7:30 – 17:00
+                                p.unlimit-item-price 6 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 3 мес.
+                                p.unlimit-item-text Утро-день <br> 7:30 – 17:00
+                                p.unlimit-item-price 15 500 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 12 мес.
+                                p.unlimit-item-text Утро-день <br> 7:30 – 17:00
+                                p.unlimit-item-price 60 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text MMA
+                                p.unlimit-item-price 60 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text Kids <br> 5-8
+                                p.unlimit-item-price 4 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text Kids <br> 9-14
+                                p.unlimit-item-price 5 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text Junior <br> 15-21
+                                p.unlimit-item-price 6 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 6 мес.
+                                p.unlimit-item-text Junior <br> 5-8
+                                p.unlimit-item-price 32 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text Часы open
+                                p.unlimit-item-price 5 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 год
+                                p.unlimit-item-text Часы open
+                                p.unlimit-item-price 50 000 ₽
+                        li
+                            .unlimit-item
+                                b.unlimit-item-time 1 мес.
+                                p.unlimit-item-text Boxing
+                                p.unlimit-item-price 5 000 ₽
+
+            section.partners
+                .container-fluid
+                    h2.partners-heading Партнёры
+                    .row
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+                        .col-6.col-md-3
+                            .partners-item
+                                img(src="images/img-partners-1.jpg", alt="")
+
+            section.request.request--panel
+                .request-obj
+                .container-fluid
+                    form(action="#")
+                        h2.request-heading Попробуйте кроссфит! <br> Первая тренировка <mark>бесплатно.</mark>
+                        .request-form
+                            .row.row-offset-14
+                                .col-md-4
+                                    input(type="text", placeholder="Ваше имя").app-input
+                                .col-md-4
+                                    input(type="tel", placeholder="Телефон ").app-input.js-mask-phone
+                                .col-md-4
+                                    button.btn.btn-red.btn-block Отправить заявку
+
+            section.reviews
+                .container-fluid
+                    h2.reviews-heading Мы уже в клубе 19.05 
+                    .row
+                        .col-md-4
+                            .reviews-item
+                                .reviews-carousel.owl-carousel
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark до
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark после
+                                .reviews-desc
+                                    h3.reviews-title Иван иванов
+                                    nav.reviews-social
+                                        a(href="#").reviews-social-link
+                                            +sprite('icon-social-vk')
+                                    p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam
+                        .col-md-4
+                            .reviews-item
+                                .reviews-carousel.owl-carousel
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark до
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark после
+                                .reviews-desc
+                                    h3.reviews-title Иван иванов
+                                    nav.reviews-social
+                                        a(href="#").reviews-social-link
+                                            +sprite('icon-social-fb')
+                                    p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam 
+                        .col-md-4
+                            .reviews-item
+                                .reviews-carousel.owl-carousel
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark до
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark после
+                                .reviews-desc
+                                    h3.reviews-title Иван иванов
+                                    nav.reviews-social
+                                        a(href="#").reviews-social-link
+                                            +sprite('icon-social-im')
+                                    p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam
+
+            section.faq
+                .container-fluid
+                    h2.faq-heading Вопросы о кроссфите 
+                    dl.faq-accordion.js-accordion
+                        dt
+                            span.faq-accordion-toggle
+                            | Кроссфит для девушек? Я стану накачанным как Арни? Я стану мужеподобной?
+                        dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания. 
+                        dt
+                            span.faq-accordion-toggle
+                            | Кроссфит это то же самое, что и групповые занятия в фитнес-клубах?
+                        dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.  
+                        dt
+                            span.faq-accordion-toggle
+                            | Это опасно? 
+                        dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
+                        dt
+                            span.faq-accordion-toggle
+                            | Подойдет ли кроссфит, если никогда не занимался? 
+                        dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
+                        dt
+                            span.faq-accordion-toggle
+                            | Что важно на первой тренировке? 
+                        dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
+                        dt
+                            span.faq-accordion-toggle
+                            | Как часто надо ходить? Когда лучше ходить утро/вечер?
+                        dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
+
+            section.contacts
+                .contacts-map#contacts-map
+                .container-fluid
+                    .contacts-desc
+                        h2.contacts-heading Контакты
+                        a(href="tel:88008008080").contacts-phone 8 (800) 800-80-80
+                        <br>
+                        a(href="mailto:crossfit19.05@gmail.com").contacts-mail crossfit19.05@gmail.com
+                        address.contacts-address 2-ая Звенигородская ул., д. 12 стр. 2
+                        a(href="#popup-callback", data-mfp).contacts-btn Обратный звонок
+ 
+    
+
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTSDYvTCv33uOODYmVs0loKN0OQ45Bhw0", async, defer)
+    script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js")
+    script(src="js/app.min.js")
+

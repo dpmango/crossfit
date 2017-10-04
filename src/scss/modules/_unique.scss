@@ -1,0 +1,49 @@
+// --------------------------------------------------------------------------
+// Unique
+// --------------------------------------------------------------------------
+
+.unique {
+	padding: 44px 0 90px;
+	position: relative;
+}
+
+.unique-obj {
+	display: block;
+	width: 997px;
+	height: 867px;
+	position: absolute;
+	right: 100%;
+	top: -150px;
+	margin: 0 -150px 0 0;
+	background: url(../images/bg-unique.png) 0 0 no-repeat;
+	z-index: -1;
+	@include breakpoint(md) {
+		margin: 0 -250px 0 0;
+	}
+}
+
+.unique-heading {
+	text-align: center;
+	margin: 0 0 50px;
+}
+
+.unique-item {
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	color: #757575;
+	padding: 20px 0;
+}
+
+.unique-item-icon {
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #008BB4;
+	margin: 0 0 5px;
+}
+
+.unique-item-text {
+	margin: 0;
+}

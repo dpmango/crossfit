@@ -1,0 +1,92 @@
+// --------------------------------------------------------------------------
+// Hall
+// --------------------------------------------------------------------------
+
+.hall {
+	position: relative;
+	padding: 25px 0;
+	[class^="col"] {
+		margin: 0 0 30px;
+	}
+	@include breakpoint(md) {
+		padding: 75px 0 25px;
+	}
+}
+
+.hall-heading {
+	text-align: center;
+	margin: 0 0 48px;
+}
+
+.hall-item {
+	position: relative;
+	z-index: 10;
+	background: #0088b4;
+	background-image: linear-gradient(-11deg, #0088b4 0%, #222 100%, #222 100%);
+	color: #fff;
+	overflow: hidden;
+	padding: 30px 18px 45px;
+	// min-height: 100%;
+	height: 100%;
+}
+
+.hall-item-image {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	z-index: -1;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	img {
+		display: block;
+	}
+}
+
+.hall-item-title {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	font-size: 38px;
+	line-height: 1;
+	padding: 0 0 12px;
+	margin: 0 0 14px;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 80%;
+		border-bottom: 4px solid #009CB4;
+	}
+}
+
+.hall-item-list {
+	margin: 0 0 0 -2px;
+	padding: 0;
+	list-style: none;
+	font-size: 16px;
+	line-height: 26px;
+	max-width: 280px;
+	& > li {
+		position: relative;
+		padding: 0 0 0 31px;
+		margin: 0 0 6px;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 4px;
+			left: 0;
+			width: 18px;
+			height: 18px;
+			border: 2px solid #009cb4;
+			border-radius: 50%;
+		}
+		&:last-child {
+			margin: 0;
+		}
+	}
+}

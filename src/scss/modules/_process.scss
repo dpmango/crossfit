@@ -1,0 +1,131 @@
+// --------------------------------------------------------------------------
+// Process
+// --------------------------------------------------------------------------
+
+.process {
+	padding: 34px 0 90px;
+}
+
+.process-heading {
+	text-align: center;
+	margin: 0 0 28px;
+}
+
+.process-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	& > li {
+		margin: 0 0 40px;
+	}
+	@include breakpoint(md) {
+		& > li {
+			margin: 0 0 -21px;
+			&:nth-child(even) {
+				.process-item-image {
+					order: 2;
+				}
+				.process-item-desc {
+					order: 1;
+					text-align: right;
+					padding-right: 50px;
+				}
+				.process-item-title {
+					justify-content: flex-end;
+				}
+				.process-item-title-text {
+					order: 2;
+					margin: 0 0 0 25px;
+				}
+				.process-item-time {
+					order: 1;
+				}
+			}
+		}
+	}
+}
+
+
+.process-item {
+	font-size: 18px;
+	line-height: 28px;
+	@include breakpoint(md) {
+		display: flex;
+		align-items: center;
+		margin: 0 -15px;
+	}
+}
+
+.process-item-image {
+	position: relative;
+	padding: 0 15px;
+	margin: 0 0 20px;
+	text-align: center;
+	img {
+		display: inline-block;
+	}
+	@include breakpoint(md) {
+		width: 50%;
+		margin: 0;
+	}
+}
+
+
+.process-item-desc {
+	text-align: center;
+	@include breakpoint(md) {
+		width: 50%;
+		padding: 0 15px;
+		text-align: left;
+	}
+}
+
+.process-item-title {
+	font-size: 28px;
+	line-height: 1;
+	margin: 0;
+	
+	@include breakpoint(md) {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin: 0;
+	}
+}
+
+.process-item-title-text {
+	display: block;
+	margin: 0 0 20px;
+	@include breakpoint(md) {
+		margin: 15px 25px 15px 0;
+	}
+}
+
+.process-item-time {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: -5px;
+	font-size: 14px;
+	line-height: 28px;
+	background: #009CB4;
+	text-align: center;
+	color: #fff;
+	padding: 5px 20px;
+	border-radius: 20px;
+	margin: 0 0 20px;
+	min-width: 106px;
+	@include breakpoint(md) {
+		margin: 15px 0;
+		// margin: 15px 25px;
+	}
+}
+
+.process-item-text {
+	display: inline-block;
+	margin: 0;
+	color: #757575;
+	@include breakpoint(md) {
+		max-width: 480px;
+	}
+}

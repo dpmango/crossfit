@@ -1,0 +1,31 @@
+// --------------------------------------------------------------------------
+// Partners
+// --------------------------------------------------------------------------
+
+.partners {
+	padding: 50px 0;
+}
+
+.partners-heading {
+	margin: 0 0 32px;
+}
+
+.partners-item {
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 30px;
+	&:before {
+		content: '';
+		float: left;
+		padding: 62.7% 0 0;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,166 @@
+// --------------------------------------------------------------------------
+// Coach
+// --------------------------------------------------------------------------
+
+.coach {
+	padding: 40px 0;
+	overflow: hidden;
+
+}
+
+.coach-heading {
+	margin: 0 0 15px;
+}
+
+.coach-caption {
+	margin: 0 0 48px;
+}
+
+.coach-item {
+	background: #222222;
+	color: #fff;
+	font-size: 14px;
+	line-height: 20px;
+	margin: 0 0 30px;
+	@include breakpoint(lg) {
+		font-size: 16px;
+		line-height: 26px;
+	}
+}
+
+.coach-item-image {
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+
+	&:before {
+		content: '';
+		float: left;
+		padding: 64% 0 0;
+	}
+	img {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		
+	}
+}
+
+.coach-item-desc {
+	padding: 28px 30px 18px 18px;
+}
+
+.coach-item-title {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 28px;
+	line-height: 1;
+	margin: 0 0 25px;
+	u {
+		text-decoration: none;
+		border-bottom: 4px solid #009cb4;
+		padding: 0 0 5px;
+	}
+	@include breakpoint(lg) {
+		font-size: 38px;
+	}
+}
+
+.coach-item-text {
+	color: #b0b0b0;
+	margin: 0 0 27px;
+}
+
+.coach-item-accordion {
+	margin: 0;
+	dt {
+		display: block;
+		font: 700 18px/28px 'Bebas Neue', Helvetica, Arial, sans-serif;
+		padding: 10px 0;
+		border-top: 1px solid #424242;
+		cursor: pointer;
+		position: relative;
+		transition: .25s;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			width: 15px;
+			height: 3px;
+			background: #009CB4;
+			margin: -1px 0 0;
+			border-radius: 2px;
+		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 50%;
+			right: 6px;
+			height: 15px;
+			width: 3px;
+			border-radius: 2px;
+			background: #009CB4;
+			margin: -7px 0 0;
+			transition: inherit;
+		}
+		&:first-child {
+			border: none;
+		}
+		&:hover {
+			color: #009CB4;
+		}
+		&.is-active:before {
+			transform: rotate(90deg);
+			opacity: 0;
+		}
+	}
+	dd {
+		margin: 0;
+		padding: 0 0 20px;
+		font-size: 14px;
+		line-height: 18px;
+		color: #b0b0b0;
+		display: none;
+	}
+}
+
+
+
+.coach-personal {
+	padding: 55px 0 55px;
+	position: relative;
+	@include breakpoint(md) {
+		padding: 105px 0 82px;
+	}
+	
+}
+
+.coach-personal-obj {
+	display: none;
+	@include breakpoint(md) {
+		display: block;
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		width: 1182px;
+		height: 848px;
+		background: url(../images/bg-coach-personal.png) 0 0 no-repeat;
+		margin: 0 0 0 -440px;
+	}
+}
+
+.coach-personal-title {
+	margin: 0 0 30px;
+}
+
+.coach-personal-text {
+
+	text-align: justify;
+}

@@ -1,0 +1,144 @@
+// --------------------------------------------------------------------------
+// Article
+// --------------------------------------------------------------------------
+
+.article {
+	ul {
+		margin: 0 0 45px;
+		padding: 0;
+		list-style: none;
+		font-size: 18px;
+		line-height: 28px;
+		color: #757575;
+		& > li {
+			position: relative;
+			padding: 0 0 0 50px;
+			margin: 0 0 20px;
+			&:after {
+				@include sprite($icon-list);
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		}
+	}
+	table {
+		width: 100%;
+		font-size: 18px;
+		line-height: 28px;
+		text-align: center;
+		border-collapse: collapse;
+		margin: 0;
+		th, td {
+			padding: 20px;
+		}
+		th {
+			background: #151515;
+			font-family: 'Bebas Neue', Helvetica, Arial, sans-serif;
+			font-weight: 700;
+			color: #fff;
+		}
+		tbody tr:nth-child(odd) td {
+			background: #F6F6F6;
+		}
+	}
+}
+
+
+.article-ctrl {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -35px -20px -35px;
+	padding: 45px 0 0;
+	@include breakpoint(lg) {
+		margin: 0 -80px -60px -70px;
+	}
+}
+
+
+.article-close, .article-next {
+	display: block;
+	text-align: center;
+	font: 700 24px/35px 'Bebas Neue', Helvetica, Arial, sans-serif;
+	padding: 15px 25px;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: .25s;
+	width: 100%;
+
+	
+	&:hover {
+		text-decoration: none;
+	}
+	@include breakpoint(lg) {
+		width: 50%;
+		padding: 25px;
+	}
+}
+
+.article-close {
+	background: #F6F6F6;
+	color: #2C2C2C;
+	text-indent: -25px;
+	[class^="icon-"] {
+		margin: 0 25px 0 0;
+	}
+	&:hover {
+		color: #2C2C2C;
+		background: #f1f1f1;
+	}
+}
+
+.article-next {
+	background: #009CB4;
+	color: #fff;
+	text-indent: 25px;
+	[class^="icon-"] {
+		margin: 0 0 0 25px;
+	}
+	&:hover {
+		background: #00B2B4;
+		color: #fff;
+	}
+}
+
+
+
+.article-carousel {
+	position: relative;
+	margin: 0 0 55px;
+	.owl-nav {
+		position: absolute;
+		bottom: 10px;
+		right: -28px;
+	}
+	.owl-prev, .owl-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
+		border-radius: 3px;
+		width: 56px;
+		height: 56px;
+		color: #2C2C2C;
+		transition: .25s;
+		margin: 0 0 12px;
+		&:hover {
+			background-color: #009cb4;
+			color: #fff;
+		}
+	}
+	img {
+		min-height: 220px;
+		object-fit: cover;
+	}
+}
+
+
+.article-scroll {
+	overflow-x: auto;
+	margin: 0 0 50px;
+}

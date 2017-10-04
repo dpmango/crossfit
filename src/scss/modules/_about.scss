@@ -1,0 +1,80 @@
+// --------------------------------------------------------------------------
+// About
+// --------------------------------------------------------------------------
+
+.about {
+	padding: 50px 0;
+	p {
+		margin: 0 0 55px;
+		max-width: 1070px;
+	}
+	.btn {
+		min-width: 248px;
+		margin-top: 2px;
+	}
+}
+
+.about-heading {
+	
+}
+
+
+
+.about-photos {
+	display: flex;
+	justify-content: center;
+	margin: 0 -2.5px 65px;
+}
+
+
+.about-photos-item {
+	position: relative;
+	width: 284px;
+	max-width: 20%;
+	overflow: hidden;
+	border: 2.5px solid #fff;
+	margin: 0;
+	max-height: 305px;
+	&:before {
+		content: '';
+		display: block;
+		float: left;
+		padding: 120% 0 0;
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+}
+
+.about-list {
+	margin: 0;
+	padding: 0 0 32px;
+	list-style: none;
+	font-size: 18px;
+	line-height: 28px;
+	color: #757575;
+	& > li {
+		margin: 0 0 20px;
+		padding: 0 0 0 45px;
+		position: relative;
+	}
+	[class^="icon-"] {
+		position: absolute;
+		top: 4px;
+		left: 0;
+	}
+}
+
+.about-image {
+	margin: 0 0 25px;
+	img {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
