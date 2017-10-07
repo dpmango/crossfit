@@ -1,6 +1,7 @@
 .wowFadeUp, .wowFadeDown, .wowFadeLeft, .wowFadeRight {
   opacity: 0;
-  animation-name: wowFade;
+  // added with scrollmonitor
+  // animation-name: wowFade;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
   animation-duration: 0.3s;

@@ -1738,8 +1738,6 @@ label {
 
 .wowFadeUp, .wowFadeDown, .wowFadeLeft, .wowFadeRight {
   opacity: 0;
-  -webkit-animation-name: wowFade;
-          animation-name: wowFade;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: ease-in;
