@@ -181,7 +181,6 @@ $(function() {
 	});
 
 	// WOW
-	// new WOW().init();
 	$('.wow').each(function(i, el){
 
 		var elWatcher = scrollMonitor.create( $(el) );

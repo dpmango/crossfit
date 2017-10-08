@@ -1773,6 +1773,29 @@ label {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); } }
 
+.preloader {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+  height: 100vh;
+  width: 100%;
+  background-image: -webkit-linear-gradient(236deg, transparent 0%, rgba(0, 148, 252, 0.31) 52%, rgba(1, 192, 255, 0.53) 88%, rgba(0, 210, 255, 0.6) 100%);
+  background-image: -o-linear-gradient(236deg, transparent 0%, rgba(0, 148, 252, 0.31) 52%, rgba(1, 192, 255, 0.53) 88%, rgba(0, 210, 255, 0.6) 100%);
+  background-image: linear-gradient(214deg, transparent 0%, rgba(0, 148, 252, 0.31) 52%, rgba(1, 192, 255, 0.53) 88%, rgba(0, 210, 255, 0.6) 100%);
+  -webkit-background-size: cover;
+          background-size: cover; }
+
 .begin {
   position: relative;
   z-index: 10;
