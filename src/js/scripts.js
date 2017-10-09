@@ -181,30 +181,33 @@ $(function() {
 	});
 
 	// WOW
-	$('.wow').each(function(i, el){
+  window.runScrollMonitor = function(){
+    setTimeout(function(){
+      $('.wow').each(function(i, el){
 
-		var elWatcher = scrollMonitor.create( $(el) );
+        var elWatcher = scrollMonitor.create( $(el) );
 
-		var delay;
-		if ( $(window).width() < 768 ){
-			delay = 0
-		} else {
-			$(el).data('wow-delay');
-		}
-		elWatcher.enterViewport(function() {
-		  $(el).css({
-				'animation-name': 'wowFade',
-				'animation-delay': delay
-			});
-		});
-		elWatcher.exitViewport(function() {
-			$(el).css({
-				'animation-name': 'none',
-				'animation-delay': 0
-			});
-		});
-	});
-
+        var delay;
+        if ( $(window).width() < 768 ){
+          delay = 0
+        } else {
+          $(el).data('wow-delay');
+        }
+        elWatcher.enterViewport(function() {
+          $(el).css({
+            'animation-name': 'wowFade',
+            'animation-delay': delay
+          });
+        });
+        elWatcher.exitViewport(function() {
+          $(el).css({
+            'animation-name': 'none',
+            'animation-delay': 0
+          });
+        });
+      });
+    },300)
+  }
 });
 
 // --------------------------------------------------------------------------

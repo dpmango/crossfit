@@ -237,6 +237,18 @@ gulp.task('clean', function() {
 });
 
 // --------------------------------------------------------------------------
+// COPY ROOT
+// --------------------------------------------------------------------------
+
+
+gulp.task('copy-root', function() {
+
+	return gulp.src('src/pace.js')
+		.pipe(gulp.dest('dist'))
+		// .pipe(browserSync.reload({ stream: true }))
+});
+
+// --------------------------------------------------------------------------
 // Watch
 // --------------------------------------------------------------------------
 
@@ -266,4 +278,4 @@ gulp.task('watch', function() {
 
 // Gulp
 
-gulp.task('default', ['clean', 'spriteImages', 'spriteSvg', 'html', 'fonts', 'images', 'svg', 'video', 'scss', 'js', 'watch']);
+gulp.task('default', ['clean', 'spriteImages', 'spriteSvg', 'html', 'fonts', 'images', 'svg', 'video', 'copy-root', 'scss', 'js', 'watch']);

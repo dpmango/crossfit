@@ -14,6 +14,20 @@
 <body>
   <div class="app">
     <div class="preloader">
+      <script type="text/javascript" src="pace.js"></script>
+      <script type="text/javascript">
+        window.paceOptions = {
+        elements: {
+        selectors: ['.header, .begin']
+        }
+        }
+        Pace.on('done', function(){
+          window.paceDone = true;
+          runScrollMonitor();
+        })
+        
+        
+      </script>
       <div class="preloader__logo"><img src="images/logo.png" alt="CrossFit"></div>
     </div>
     <header class="header">
