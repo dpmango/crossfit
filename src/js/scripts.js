@@ -1,8 +1,7 @@
 $(function() {
-
   // --------------------------------------------------------------------------
-	// PRELOADER
-	// --------------------------------------------------------------------------
+  // PRELOADER
+  // --------------------------------------------------------------------------
   var preloadPictures = function(pictureUrls, callback) {
     var i, j, loaded = 0;
 
@@ -26,6 +25,9 @@ $(function() {
       runScrollMonitor();
     }, 500)
   })
+});
+
+$(function() {
 
 	// --------------------------------------------------------------------------
 	// SVG
@@ -208,33 +210,42 @@ $(function() {
 	});
 
 	// WOW
+  var monitorActive = false;
   window.runScrollMonitor = function(){
     setTimeout(function(){
-      $('.wow').each(function(i, el){
+      if ( !monitorActive ){
+        monitorActive = true;
+        $('.wow').each(function(i, el){
 
-        var elWatcher = scrollMonitor.create( $(el) );
+          var elWatcher = scrollMonitor.create( $(el) );
 
-        var delay;
-        if ( $(window).width() < 768 ){
-          delay = 0
-        } else {
-          $(el).data('wow-delay');
-        }
-        elWatcher.enterViewport(function() {
-          $(el).css({
-            'animation-name': 'wowFade',
-            'animation-delay': delay
+          var delay;
+          if ( $(window).width() < 768 ){
+            delay = 0
+          } else {
+            $(el).data('wow-delay');
+          }
+          elWatcher.enterViewport(function() {
+            $(el).css({
+              'animation-name': 'wowFade',
+              'animation-delay': delay
+            });
+          });
+          elWatcher.exitViewport(function() {
+            $(el).css({
+              'animation-name': 'none',
+              'animation-delay': 0
+            });
           });
         });
-        elWatcher.exitViewport(function() {
-          $(el).css({
-            'animation-name': 'none',
-            'animation-delay': 0
-          });
-        });
-      });
-    },300)
+      }
+
+    },300);
   }
+  setTimeout(function(){
+    runScrollMonitor();
+  },1000)
+
 });
 
 // --------------------------------------------------------------------------
