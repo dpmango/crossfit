@@ -1,5 +1,32 @@
 $(function() {
 
+  // --------------------------------------------------------------------------
+	// PRELOADER
+	// --------------------------------------------------------------------------
+  var preloadPictures = function(pictureUrls, callback) {
+    var i, j, loaded = 0;
+
+    for (i = 0, j = pictureUrls.length; i < j; i++) {
+      (function (img, src) {
+          img.onload = function () {
+              if (++loaded == pictureUrls.length && callback) {
+                  callback();
+              }
+          };
+          img.src = src;
+      } (new Image(), pictureUrls[i]));
+    }
+  };
+
+
+  preloadPictures(['images/bg-begin-poster.png'], function(){
+    // callback function
+    setTimeout(function(){
+      $('body').addClass('pace-done');
+      runScrollMonitor();
+    }, 500)
+  })
+
 	// --------------------------------------------------------------------------
 	// SVG
 	// --------------------------------------------------------------------------
@@ -216,8 +243,10 @@ $(function() {
 
 $(document).ready(function(){
 	var map;
-	window.initMap = function() {
+  // When the window has finished loading create our google map below
+  google.maps.event.addDomListener(window, 'load', init);
 
+	function init() {
 			map = new google.maps.Map(document.getElementById('contacts-map'), {
 					center: {lat: 55.76252304, lng: 37.55560935},
 					zoom: 17,
