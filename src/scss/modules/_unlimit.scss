@@ -34,7 +34,10 @@
 }
 
 .unlimit-item {
-	background: #222222;
+	// background: #222222;
+  background-image: linear-gradient(-11deg, #222222 0%, #222 50%, #0088b4 100%);
+  background-position: 100% 100%;
+  background-size: 200% 200%;
 	width: 100%;
 	text-align: center;
 	color: #fff;
@@ -43,9 +46,16 @@
 	justify-content: center;
 	min-height: 190px;
 	padding: 21px 10px;
+  transition: all .3s ease;
 	& > * {
 		width: 100%;
 	}
+  &:hover{
+    background-position: 50% 50%;
+    .unlimit-item-price{
+      transform: scale(1.05);
+    }
+  }
 }
 
 .unlimit-item-time {
@@ -81,4 +91,6 @@
 	margin: auto 0 0;
 	font: 700 26px/1 'Bebas Neue', Helvetica, Arial, sans-serif;
 	color: #009cb4;
+  transform-origin: 50% 50%;
+  transition: all .4s ease;
 }

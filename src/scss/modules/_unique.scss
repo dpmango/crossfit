@@ -33,6 +33,14 @@
 	line-height: 24px;
 	color: #757575;
 	padding: 20px 0;
+  &:hover{
+    .unique-item-icon {
+      transform: scale(1.1);
+    }
+    .unique-item-text{
+      color: #009cb4;
+    }
+  }
 }
 
 .unique-item-icon {
@@ -42,8 +50,11 @@
 	justify-content: center;
 	color: #008BB4;
 	margin: 0 0 5px;
+  transform-origin: 50% 50%;
+  transition: all .3s ease;
 }
 
 .unique-item-text {
 	margin: 0;
+  transition: all .3s ease;
 }

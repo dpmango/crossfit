@@ -90,7 +90,13 @@ body
 
             section.begin
                 .begin-video
-                    video(src="video/bg-begin.mp4", poster="images/bg-begin-poster.png", autoplay, muted, loop)
+                    video(poster="images/bg-begin-poster.png", autoplay, muted, loop)
+                      //- source(src='video/duel.ogv', type='video/ogg; codecs="theora, vorbis"')
+                      source(src='video/hero-video.webm', type='video/webm; codecs="vp8, vorbis"')
+                      source(src='video/hero-video.mp4', type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                      
+
+
 
                 .container-fluid
                     h1.begin-heading.wow.wowFadeUp Стань сильным, выносливым, уверенным в себе. <br> Стань лучше в Клубе 19.05!
@@ -191,10 +197,10 @@ body
 
             section.given
                 .container-fluid
-                    h2.given-heading.wow.wowFadeUp Что дают занятия
+                    h2.given-heading.wow.wowFadeUp(data-wow-delay=".05s") Что дают занятия
                     .row
-                        .col-lg-4.wow.wowFadeUp(data-wow-delay=".25s")
-                            .given-item
+                        .col-lg-4
+                            .given-item.wow.wowFadeUp(data-wow-delay=".25s")
                                 figure.given-item-image
                                     img(src="images/img-given-1.png", alt="")
                                 h3.given-item-title Для мужчин
@@ -205,8 +211,8 @@ body
                                     li Повышение жизненного тонуса 
                                     li Уверенность в себе
 
-                        .col-lg-4.wow.wowFadeUp(data-wow-delay=".5s")
-                            .given-item
+                        .col-lg-4
+                            .given-item.wow.wowFadeUp(data-wow-delay=".5s")
                                 figure.given-item-image
                                     img(src="images/img-given-2.png", alt="")
                                 h3.given-item-title Для девушек
@@ -216,8 +222,8 @@ body
                                     li Идеальные ноги, ягодицы и пресс
                                     li Хорошее настроение
 
-                        .col-lg-4.wow.wowFadeUp(data-wow-delay=".75s")
-                            .given-item
+                        .col-lg-4
+                            .given-item.wow.wowFadeUp(data-wow-delay=".75s")
                                 figure.given-item-image
                                     img(src="images/img-given-3.png", alt="")
                                 h3.given-item-title Для детей
@@ -451,8 +457,8 @@ body
                 .container-fluid
 
                     .row
-                        .col-lg-4.wow.wowFadeUp(data-wow-delay=".25s")
-                            .hall-item
+                        .col-lg-4
+                            .hall-item.wow.wowFadeUp(data-wow-delay=".25s")
                                 figure.hall-item-image
                                     img(src="images/img-hall-1.png", alt="")
                                 h3.hall-item-title Зал кроссфит
@@ -462,8 +468,8 @@ body
                                     li канаты, кольца
                                     li кардиозона
                                     li усиленный пол
-                        .col-lg-4.wow.wowFadeUp(data-wow-delay=".5s")
-                            .hall-item
+                        .col-lg-4
+                            .hall-item.wow.wowFadeUp(data-wow-delay=".5s")
                                 figure.hall-item-image
                                     img(src="images/img-hall-2.png", alt="")
                                 h3.hall-item-title Зал единоборств 
@@ -474,8 +480,8 @@ body
                                     li Ринг
                                     li Мягкие стены
                                     li Груши
-                        .col-lg-4.wow.wowFadeUp(data-wow-delay=".75s")
-                            .hall-item
+                        .col-lg-4
+                            .hall-item.wow.wowFadeUp(data-wow-delay=".75s")
                                 figure.hall-item-image
                                     img(src="images/img-hall-3.png", alt="")
                                 h3.hall-item-title Уличная площадка 
