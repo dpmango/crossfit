@@ -1736,6 +1736,9 @@ label {
   .popup-form .app-input, .popup-form .app-textarea, .popup-form .app-select .jq-selectbox__select, .app-select .popup-form .jq-selectbox__select {
     margin: 0 0 14px; }
 
+.wow {
+  visibility: hidden; }
+
 .wowFadeUp, .wowFadeDown, .wowFadeLeft, .wowFadeRight {
   opacity: 0;
   -webkit-animation-fill-mode: forwards;

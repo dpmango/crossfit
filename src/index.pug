@@ -45,7 +45,7 @@ body
             img(src="images/logo.png", alt="CrossFit")
           
         header.header
-            .container-fluid.wow.wowFadeUp(data-wow-delay=".75s")
+            .container-fluid.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                 .row.align-items-center
                     .col-md-2.col-lg-4
                         .logo
@@ -72,7 +72,7 @@ body
                             a(href="#popup-callback", data-mfp).call-btn Обратный звонок
                 
                 
-            nav.nav.wow.wowFadeUp(data-wow-delay="1s")
+            nav.nav.wow(data-animation-name="wowFadeUp" data-wow-delay="1s")
                 button.nav-btn
                     span
                     span
@@ -80,10 +80,23 @@ body
                 .nav-dropdown
                      .container-fluid
                         ul.nav-menu
-                            - var menu = ['Кроссфит', 'Клуб', 'Тренеры', 'Расписание и цены', 'Галерея', 'Отзывы', 'Вопросы']
-                                each item in menu
-                                    li
-                                        a(href="#").nav-link=item
+                            li
+                                a(href="#sectionCrossfit").nav-link Кроссфит
+                            li
+                                a(href="#sectionClub").nav-link Клуб
+                            li
+                                a(href="#sectionCoach").nav-link Тренеры
+                            li
+                                a(href="#sectionTimetable").nav-link Расписание и цены
+                            li
+                                a(href="#sectionPrices").nav-link Цены   
+                            li
+                                a(href="#sectionGallery").nav-link Галерея
+                            li
+                                a(href="#sectionTestimonials").nav-link Отзывы
+                                                 
+                                  
+                                
 
         
         main.main
@@ -101,7 +114,7 @@ body
                 .container-fluid
                     h1.begin-heading.wow.wowFadeUp Стань сильным, выносливым, уверенным в себе. <br> Стань лучше в Клубе 19.05!
                     .row
-                        .col-md-5.wow.wowFadeUp(data-wow-delay=".25s")
+                        .col-md-5.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             ul.begin-list
                                 li Клуб аффилирован CrossFit, Inc.
                                 li Профессиональное оборудование.
@@ -110,7 +123,7 @@ body
                                 li Консультации диетолога.
                                 li Кафе здорового питания.
                                 li Сауна, массаж.
-                        .col-md-7.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-md-7.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .begin-news
                                 h3.begin-news-heading Новости
                                 ul.begin-news-list
@@ -122,7 +135,7 @@ body
                                         a(href="#popup-article", data-mfp).begin-news-link
                                             u Осенние акции в CrossFit 19.05
                                         time.begin-news-date 19.11.17
-                    .request.wow.wowFadeUp(data-wow-delay="1.25s")
+                    .request.wow(data-animation-name="wowFadeUp" data-wow-delay="1.25s")
                         form(action="#")
                             h2.request-heading Попробуйте кроссфит!  Первая тренировка <mark>бесплатно.</mark> 
                             .row.row-offset-14
@@ -133,7 +146,7 @@ body
                                 .col-md-4
                                     button.btn.btn-red.btn-block Отправить заявку
 
-            section.adv
+            section.advs#sectionCrossfit
                 .container-fluid
 
                     ul.adv-list
@@ -153,7 +166,7 @@ body
                                 figure.adv-item-image
                                     img(src="images/img-adv-3.png", alt="")
                                 h3.adv-item-title Полезно <br> для здоровья
-                        li.wow.wowFadeUp(data-wow-delay=".5s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .adv-item
                                 figure.adv-item-image
                                     img(src="images/img-adv-4.png", alt="")
@@ -169,27 +182,27 @@ body
                 .container-fluid
                     h2.effective-heading.wow.wowFadeUp Что такое эффективный кроссфит
                     ul.effective-list
-                        li.wow.wowFadeUp(data-wow-delay=".15s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s")
                             .effective-item
                                 figure.effective-item-icon
                                     +sprite('icon-effective-1')
                                 p.effective-item-text Регулярные <br> групповые занятия
-                        li.wow.wowFadeUp(data-wow-delay=".25s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             .effective-item
                                 figure.effective-item-icon
                                     +sprite('icon-effective-2')
                                 p.effective-item-text Индивидуальная схема питания
-                        li.wow.wowFadeUp(data-wow-delay=".35s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
                             .effective-item
                                 figure.effective-item-icon
                                     +sprite('icon-effective-3')
                                 p.effective-item-text Персональные тренировки
-                        li.wow.wowFadeUp(data-wow-delay=".45s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
                             .effective-item
                                 figure.effective-item-icon
                                     +sprite('icon-effective-4')
                                 p.effective-item-text Расслабление <br>и восстановление
-                        li.wow.wowFadeUp(data-wow-delay=".55s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                             .effective-item
                                 figure.effective-item-icon
                                     +sprite('icon-effective-5')
@@ -197,10 +210,10 @@ body
 
             section.given
                 .container-fluid
-                    h2.given-heading.wow.wowFadeUp(data-wow-delay=".05s") Что дают занятия
+                    h2.given-heading.wow(data-animation-name="wowFadeUp" data-wow-delay=".05s") Что дают занятия
                     .row
                         .col-lg-4
-                            .given-item.wow.wowFadeUp(data-wow-delay=".25s")
+                            .given-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                 figure.given-item-image
                                     img(src="images/img-given-1.png", alt="")
                                 h3.given-item-title Для мужчин
@@ -212,7 +225,7 @@ body
                                     li Уверенность в себе
 
                         .col-lg-4
-                            .given-item.wow.wowFadeUp(data-wow-delay=".5s")
+                            .given-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                 figure.given-item-image
                                     img(src="images/img-given-2.png", alt="")
                                 h3.given-item-title Для девушек
@@ -223,7 +236,7 @@ body
                                     li Хорошее настроение
 
                         .col-lg-4
-                            .given-item.wow.wowFadeUp(data-wow-delay=".75s")
+                            .given-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                                 figure.given-item-image
                                     img(src="images/img-given-3.png", alt="")
                                 h3.given-item-title Для детей
@@ -242,9 +255,9 @@ body
                     ul.process-list
                         li
                             .process-item
-                                .process-item-image.wow.wowFadeUp(data-wow-delay=".25s")
+                                .process-item-image.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                     img(src="images/img-process-1.png", alt="")
-                                .process-item-desc.wow.wowFadeUp(data-wow-delay=".5s")
+                                .process-item-desc.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                     h3.process-item-title
                                         span.process-item-title-text разминка
                                         mark.process-item-time  5-10 минут   
@@ -253,9 +266,9 @@ body
 
                         li
                             .process-item
-                                .process-item-image.wow.wowFadeUp(data-wow-delay=".25s")
+                                .process-item-image.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                     img(src="images/img-process-2.png", alt="")
-                                .process-item-desc.wow.wowFadeUp(data-wow-delay=".5s")
+                                .process-item-desc.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                     h3.process-item-title
                                         span.process-item-title-text Отработка техники силовой части
                                         mark.process-item-time  5 минут   
@@ -263,9 +276,9 @@ body
 
                         li
                             .process-item
-                                .process-item-image.wow.wowFadeUp(data-wow-delay=".25s")
+                                .process-item-image.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                     img(src="images/img-process-3.png", alt="")
-                                .process-item-desc.wow.wowFadeUp(data-wow-delay=".5s")
+                                .process-item-desc.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                     h3.process-item-title
                                         span.process-item-title-text Силовая часть
                                         mark.process-item-time 10 минут   
@@ -273,9 +286,9 @@ body
 
                         li
                             .process-item
-                                .process-item-image.wow.wowFadeUp(data-wow-delay=".25s")
+                                .process-item-image.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                     img(src="images/img-process-4.png", alt="")
-                                .process-item-desc.wow.wowFadeUp(data-wow-delay=".5s")
+                                .process-item-desc.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                     h3.process-item-title
                                         span.process-item-title-text Брифинг к комплексу и подготовка оборудования
                                     p.process-item-text Готовимся к основному комплексу дня. <br>Индивидуально настраиваем оборудование.
@@ -283,9 +296,9 @@ body
 
                         li
                             .process-item
-                                .process-item-image.wow.wowFadeUp(data-wow-delay=".25s")
+                                .process-item-image.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                     img(src="images/img-process-5.png", alt="")
-                                .process-item-desc.wow.wowFadeUp(data-wow-delay=".5s")
+                                .process-item-desc.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                     h3.process-item-title
                                         span.process-item-title-text WOD – основной комплекс.
                                         mark.process-item-time 20 минут   
@@ -293,9 +306,9 @@ body
 
                         li
                             .process-item
-                                .process-item-image.wow.wowFadeUp(data-wow-delay=".25s")
+                                .process-item-image.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                     img(src="images/img-process-6.png", alt="")
-                                .process-item-desc.wow.wowFadeUp(data-wow-delay=".5s")
+                                .process-item-desc.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                     h3.process-item-title
                                         span.process-item-title-text Заминка, растяжка  
                                     p.process-item-text Убираем оборудование. Делаем заминку для правильного эффекта, растягиваемся (выполняем упражнение на гибкость), чтобы быстрее восстановиться после занятия. 
@@ -304,7 +317,7 @@ body
                 .program-obj
                 .container-fluid
                     h2.program-heading.wow.wowFadeUp Из чего будет состоять тренировки <br> на ближайшие <mark>7 дней</mark>
-                    .program-tabs.wow.wowFadeUp(data-wow-delay=".3s")
+                    .program-tabs.wow(data-animation-name="wowFadeUp" data-wow-delay=".3s")
 
                         .program-tabs-panel.is-active
                             .program-carousel.owl-carousel
@@ -410,28 +423,28 @@ body
                             li
                                 span.program-tabs-btn День 7
 
-            section.about
+            section.about#sectionClub
 
                 .container-fluid
                     h2.about-heading.wow.wowFadeUp О клубе
-                    p.wow.wowFadeUp(data-wow-delay=".15s") <strong>CrossFit 19.05</strong> — аффилированный международной ассоциацией клуб премиум-класса у метро «Улица 1905 года».  Клуб оборудован профессиональными тренажерами и снарядами Yousteel.
+                    p.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s") <strong>CrossFit 19.05</strong> — аффилированный международной ассоциацией клуб премиум-класса у метро «Улица 1905 года».  Клуб оборудован профессиональными тренажерами и снарядами Yousteel.
 
                 .about-photos
-                    .about-photos-item.wow.wowFadeUp(data-wow-delay=".25s")
+                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                         img(src="images/photo-about-1.jpg", alt="")
-                    .about-photos-item.wow.wowFadeUp(data-wow-delay=".35s")
+                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
                         img(src="images/photo-about-2.jpg", alt="")
-                    .about-photos-item.wow.wowFadeUp(data-wow-delay=".45s")
+                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
                         img(src="images/photo-about-3.jpg", alt="")
-                    .about-photos-item.wow.wowFadeUp(data-wow-delay=".55s")
+                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                         img(src="images/photo-about-4.jpg", alt="")
-                    .about-photos-item.wow.wowFadeUp(data-wow-delay=".65s")
+                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s")
                         img(src="images/photo-about-5.jpg", alt="")
 
                 .container-fluid
                     p.wow.wowFadeUp При строительстве клуба мы очень старались сделать спортивную зону максимально комфортной. В наших залах много дневного света, всегда есть чем дышать, прекрасная система вентиляции. Мы предусмотрели шумоизоляцию таким образом, чтобы активно заниматься тяжелой атлетикой, используя свободные веса, в любое время.
                     .row
-                        .col-md-6.wow.wowFadeUp(data-wow-delay=".25s")
+                        .col-md-6.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             ul.about-list
                                 li
                                     +sprite('icon-check')
@@ -447,7 +460,7 @@ body
                                     | Зал единоборств (50 кв.м.). Зал стретчинга 30 (кв.м).
                             figure.about-image
                                 img(src="images/img-about-1.jpg", alt="")
-                        .col-md-6.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-md-6.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             figure.about-image
                                 img(src="images/img-about-2.jpg", alt="")
                             p В клубе находится кафе, где Вы можете вкусно и полезно поесть или выпить спортивный коктейль. Массаж и сауна позволят расслабиться и лучше восстановиться после тяжелого дня.
@@ -458,7 +471,7 @@ body
 
                     .row
                         .col-lg-4
-                            .hall-item.wow.wowFadeUp(data-wow-delay=".25s")
+                            .hall-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                                 figure.hall-item-image
                                     img(src="images/img-hall-1.png", alt="")
                                 h3.hall-item-title Зал кроссфит
@@ -469,7 +482,7 @@ body
                                     li кардиозона
                                     li усиленный пол
                         .col-lg-4
-                            .hall-item.wow.wowFadeUp(data-wow-delay=".5s")
+                            .hall-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                                 figure.hall-item-image
                                     img(src="images/img-hall-2.png", alt="")
                                 h3.hall-item-title Зал единоборств 
@@ -481,7 +494,7 @@ body
                                     li Мягкие стены
                                     li Груши
                         .col-lg-4
-                            .hall-item.wow.wowFadeUp(data-wow-delay=".75s")
+                            .hall-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                                 figure.hall-item-image
                                     img(src="images/img-hall-3.png", alt="")
                                 h3.hall-item-title Уличная площадка 
@@ -496,7 +509,7 @@ body
                 .container-fluid
                     h2.traning-heading.wow.wowFadeUp Тренировки клуба
                     dl.traning-accordion.js-accordion
-                        dt.wow.wowFadeUp(data-wow-delay=".25s") CrossFit Gymnastics
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s") CrossFit Gymnastics
                             +sprite('icon-down')
                             img(src="images/img-traning-gymnastics.png", alt="")
                         dd
@@ -505,7 +518,7 @@ body
                                 li Повышают уверенность в себе.
                                 li Дают навыки самообороны.
 
-                        dt.wow.wowFadeUp(data-wow-delay=".35s") Crossfit weightlifting
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s") Crossfit weightlifting
                             +sprite('icon-down')
                             img(src="images/img-traning-weightlifting.png", alt="")
                         dd
@@ -514,7 +527,7 @@ body
                                 li Повышают уверенность в себе.
                                 li Дают навыки самообороны.
 
-                        dt.wow.wowFadeUp(data-wow-delay=".45s") Crossfit Stretching 
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s") Crossfit Stretching 
                             +sprite('icon-down')
                             img(src="images/img-traning-stretching.png", alt="")
                         dd
@@ -523,7 +536,7 @@ body
                                 li Повышают уверенность в себе.
                                 li Дают навыки самообороны.
 
-                        dt.wow.wowFadeUp(data-wow-delay=".55s") Crossfit Barbell-less
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s") Crossfit Barbell-less
                             +sprite('icon-down')
                             img(src="images/img-traning-barbell-less.png", alt="")
                         dd
@@ -532,7 +545,7 @@ body
                                 li Повышают уверенность в себе.
                                 li Дают навыки самообороны.
 
-                        dt.wow.wowFadeUp(data-wow-delay=".65s") Crossfit Kids
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s") Crossfit Kids
                             +sprite('icon-down')
                             img(src="images/img-traning-kids.png", alt="")
                         dd
@@ -546,48 +559,48 @@ body
                 .container-fluid
                     h2.unique-heading.wow.wowFadeUp Уникальность CrossFit 19.05
                     .row.justify-content-center
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".25s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-1')
                                 p.unique-item-text Площадка для занятий <br> на улице
 
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".35s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-2')
                                 p.unique-item-text Зона боевых искусств
 
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".45s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-3')
                                 p.unique-item-text Сауна
 
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".55s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-4')
                                 p.unique-item-text Программа массажа
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".65s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-5')
                                 p.unique-item-text Кафе
 
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".75s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-6')
                                 p.unique-item-text Парковка
 
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".85s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".85s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-7')
                                 p.unique-item-text Программы от новичка  <br> до профессионалов
 
-                        .col-sm-4.col-md-3.wow.wowFadeUp(data-wow-delay=".95s")
+                        .col-sm-4.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".95s")
                             .unique-item
                                 figure.unique-item-icon
                                     +sprite('icon-unique-8')
@@ -596,18 +609,18 @@ body
             section.info
                 .container-fluid
                     h2.info-heading.wow.wowFadeUp У нас как дома 
-                    p.info-caption.wow.wowFadeUp(data-wow-delay=".25s") <strong>CrossFit 19.05</strong> — клуб, члены которого заботятся о своем здоровье. 
+                    p.info-caption.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s") <strong>CrossFit 19.05</strong> — клуб, члены которого заботятся о своем здоровье. 
                     .row
-                        .col-md-6.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-md-6.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .info-item
                                 h3.info-item-title Развитие для каждого
                                 p.info-item-text Занимайтесь в команде или с персональным тренером. <br> Мы формируем программы для каждого на основе вашей физической подготовки. Нагрузка будет возрастать индивидуально с учетом вашего прогресса.
-                        .col-md-6.wow.wowFadeUp(data-wow-delay=".75s")
+                        .col-md-6.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                             .info-item
                                 h3.info-item-title Релакс
                                 p.info-item-text После занятий можно расслабиться в сауне или на массаже. В нашем кафе готовят только полезные и вкусные блюда. 
 
-                    .request.wow.wowFadeUp(data-wow-delay=".5s")
+                    .request.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                         form(action="#")
                             h2.request-heading Попробуйте кроссфит!  Первая тренировка <mark>бесплатно.</mark> 
                             .row.row-offset-14
@@ -618,12 +631,12 @@ body
                                 .col-md-4
                                     button.btn.btn-red.btn-block Отправить заявку
 
-            section.coach
+            section.coach#sectionCoach
                 .container-fluid
                     h2.coach-heading.wow.wowFadeUp Тренеры в <mark>CrossFit19.05</mark>
-                    p.coach-caption.wow.wowFadeUp(data-wow-delay=".15s") Имеют высшее образование в сфере физической культуры и спорта
+                    p.coach-caption.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s") Имеют высшее образование в сфере физической культуры и спорта
                     .row
-                        .col-md-4.wow.wowFadeUp(data-wow-delay=".25s")
+                        .col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             .coach-item
                                 figure.coach-item-image
                                     img(src="images/img-coach-1.jpg", alt="")
@@ -638,7 +651,7 @@ body
                                         dd Lorem ipsum dolor sit amet, consectetur 
                                         dt Достижения
                                         dd Lorem ipsum dolor sit amet, consectetur
-                        .col-md-4.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .coach-item
                                 figure.coach-item-image
                                     img(src="images/img-coach-1.jpg", alt="")
@@ -653,7 +666,7 @@ body
                                         dd Lorem ipsum dolor sit amet, consectetur 
                                         dt Достижения
                                         dd Lorem ipsum dolor sit amet, consectetur
-                        .col-md-4.wow.wowFadeUp(data-wow-delay=".75s")
+                        .col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                             .coach-item
                                 figure.coach-item-image
                                     img(src="images/img-coach-1.jpg", alt="")
@@ -674,13 +687,13 @@ body
                         .row
                             .col-md-7
                                 h2.coach-personal-title.wow.wowFadeUp Персональные тренировки
-                                p.coach-personal-text.wow.wowFadeUp(data-wow-delay=".25s") В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.  
+                                p.coach-personal-text.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s") В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.  
 
-            section.schedule
+            section.schedule#sectionTimetable
                 .container-fluid
                     h2.schedule-heading.wow.wowFadeUp РАСПИСАНИЕ Тренировок
-                    p.schedule-caption.wow.wowFadeUp(data-wow-delay=".15s") Мы открыты по будням <mark>7:00 - 23:00</mark> <span>|</span> По выходным <mark>9:00 - 21:00</mark>
-                    .schedule-table-scroll.wow.wowFadeUp(data-wow-delay=".25s")
+                    p.schedule-caption.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s") Мы открыты по будням <mark>7:00 - 23:00</mark> <span>|</span> По выходным <mark>9:00 - 21:00</mark>
+                    .schedule-table-scroll.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                         table.schedule-table.js-table-hover
                             thead
                                 tr
@@ -1121,7 +1134,7 @@ body
                                     td
                                     td
 
-            section.base
+            section.base#sectionPrices
                 .container-fluid
                     h2.base-heading.wow.wowFadeUp Базовые абонементы
                     .row
@@ -1131,7 +1144,7 @@ body
                                 b.base-item-count 6 ЗАНЯТИЙ
                                 p.base-item-price 5 100 ₽
                                 small.base-item-one <b>850 ₽</b> 1 ЗАНЯТИЕ
-                        .col-sm-6.col-md-4.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-sm-6.col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .base-item
                                 h3.base-item-title Базовый абонемент
                                 b.base-item-count 10 ЗАНЯТИЙ
@@ -1149,7 +1162,7 @@ body
                                 b.base-item-count 72 ЗАНЯТИЙ
                                 p.base-item-price 39 600 ₽
                                 small.base-item-one <b>550 ₽</b> 1 ЗАНЯТИЕ
-                        .col-sm-6.col-md-4.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-sm-6.col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .base-item
                                 h3.base-item-title Базовый абонемент
                                 b.base-item-count 144 ЗАНЯТИЙ
@@ -1167,7 +1180,7 @@ body
                                 b.base-item-count 60 ЗАНЯТИЙ ЧАСЫ OPEN
                                 p.base-item-price 30 000 ₽
                                 small.base-item-one <b>500 ₽</b> 1 ЗАНЯТИЕ
-                        .col-sm-6.col-md-4.wow.wowFadeUp(data-wow-delay=".55s")
+                        .col-sm-6.col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                             .base-item
                                 h3.base-item-title Базовый абонемент
                                 b.base-item-count 4 занятия Boxing
@@ -1185,7 +1198,7 @@ body
                                 b.base-item-count 3 занятия Тяжелая Атлетика
                                 p.base-item-price 3 000 ₽
                                 small.base-item-one <b>1 000 ₽</b> 1 ЗАНЯТИЕ
-                        .col-sm-6.col-md-4.wow.wowFadeUp(data-wow-delay=".5s")
+                        .col-sm-6.col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .base-item
                                 h3.base-item-title Базовый абонемент
                                 b.base-item-count 6 занятий Тяжелая Атлетика
@@ -1214,104 +1227,104 @@ body
                     h2.unlimit-heading.wow.wowFadeUp Безлимитные абонементы
 
                     ul.unlimit-list
-                        li.wow.wowFadeUp(data-wow-delay=".15s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-price 8 500 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".2s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".2s")
                             .unlimit-item
                                 b.unlimit-item-time 3 мес.
                                 p.unlimit-item-price 21 500 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".25s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             .unlimit-item
                                 b.unlimit-item-time 6 мес.
                                 p.unlimit-item-price 42 500 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".3s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".3s")
                             .unlimit-item
                                 b.unlimit-item-time 12 мес.
                                 p.unlimit-item-price 85 500 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".35s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text Утро-день <br> 7:30 – 17:00
                                 p.unlimit-item-price 6 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".4s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".4s")
                             .unlimit-item
                                 b.unlimit-item-time 3 мес.
                                 p.unlimit-item-text Утро-день <br> 7:30 – 17:00
                                 p.unlimit-item-price 15 500 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".45s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
                             .unlimit-item
                                 b.unlimit-item-time 12 мес.
                                 p.unlimit-item-text Утро-день <br> 7:30 – 17:00
                                 p.unlimit-item-price 60 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".5s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text MMA
                                 p.unlimit-item-price 60 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".55s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text Kids <br> 5-8
                                 p.unlimit-item-price 4 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".6s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".6s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text Kids <br> 9-14
                                 p.unlimit-item-price 5 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".65s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text Junior <br> 15-21
                                 p.unlimit-item-price 6 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".7s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".7s")
                             .unlimit-item
                                 b.unlimit-item-time 6 мес.
                                 p.unlimit-item-text Junior <br> 5-8
                                 p.unlimit-item-price 32 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".75s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text Часы open
                                 p.unlimit-item-price 5 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".8s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".8s")
                             .unlimit-item
                                 b.unlimit-item-time 1 год
                                 p.unlimit-item-text Часы open
                                 p.unlimit-item-price 50 000 ₽
-                        li.wow.wowFadeUp(data-wow-delay=".85s")
+                        li.wow(data-animation-name="wowFadeUp" data-wow-delay=".85s")
                             .unlimit-item
                                 b.unlimit-item-time 1 мес.
                                 p.unlimit-item-text Boxing
                                 p.unlimit-item-price 5 000 ₽
 
-            section.partners
+            section.partners#sectionGallery
                 .container-fluid
                     h2.partners-heading.wow.wowFadeUp Партнёры
                     .row
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".15s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".25s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".35s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".45s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".55s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".65s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".75s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
-                        .col-6.col-md-3.wow.wowFadeUp(data-wow-delay=".85s")
+                        .col-6.col-md-3.wow(data-animation-name="wowFadeUp" data-wow-delay=".85s")
                             .partners-item
                                 img(src="images/img-partners-1.jpg", alt="")
 
@@ -1329,7 +1342,7 @@ body
                                 .col-md-4
                                     button.btn.btn-red.btn-block Отправить заявку
 
-            section.reviews
+            section.reviews#sectionTestimonials
                 .container-fluid
                     h2.reviews-heading.wow.wowFadeUp Мы уже в клубе 19.05 
                     .row
@@ -1383,27 +1396,27 @@ body
                 .container-fluid
                     h2.faq-heading.wow.wowFadeUp Вопросы о кроссфите 
                     dl.faq-accordion.js-accordion
-                        dt.wow.wowFadeUp(data-wow-delay=".15s")
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s")
                             span.faq-accordion-toggle
                             | Кроссфит для девушек? Я стану накачанным как Арни? Я стану мужеподобной?
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания. 
-                        dt.wow.wowFadeUp(data-wow-delay=".25s")
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             span.faq-accordion-toggle
                             | Кроссфит это то же самое, что и групповые занятия в фитнес-клубах?
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.  
-                        dt.wow.wowFadeUp(data-wow-delay=".35s")
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
                             span.faq-accordion-toggle
                             | Это опасно? 
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
-                        dt.wow.wowFadeUp(data-wow-delay=".45s")
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
                             span.faq-accordion-toggle
                             | Подойдет ли кроссфит, если никогда не занимался? 
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
-                        dt.wow.wowFadeUp(data-wow-delay=".55s")
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
                             span.faq-accordion-toggle
                             | Что важно на первой тренировке? 
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
-                        dt.wow.wowFadeUp(data-wow-delay=".65s")
+                        dt.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s")
                             span.faq-accordion-toggle
                             | Как часто надо ходить? Когда лучше ходить утро/вечер?
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
@@ -1416,7 +1429,7 @@ body
                         a(href="tel:88008008080" data-wow-delay=".25s").contacts-phone.wow.wowFadeUp 8 (800) 800-80-80
                         <br>
                         a(href="mailto:crossfit19.05@gmail.com" data-wow-delay=".35s").contacts-mail.wow.wowFadeUp crossfit19.05@gmail.com
-                        address.contacts-address.wow.wowFadeUp(data-wow-delay=".45s") 2-ая Звенигородская ул., д. 12 стр. 2
+                        address.contacts-address.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s") 2-ая Звенигородская ул., д. 12 стр. 2
                         a(href="#popup-callback", data-mfp, data-wow-delay=".55s").contacts-btn.wow.wowFadeUp Обратный звонок
  
     

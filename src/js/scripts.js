@@ -90,6 +90,43 @@ $(function() {
 	});
 
 
+  // Smoth scroll
+	$('a[href^="#section"]').click( function() {
+      var el = $(this).attr('href');
+      $('body, html').animate({
+          scrollTop: $(el).offset().top - 80}, 1000);
+      return false;
+	});
+
+  // Set active anchor tags
+  // Cache selectors
+  var topMenu = $(".nav-menu"),
+  topMenuHeight = topMenu.outerHeight()+80,
+  // All list items
+  menuItems = topMenu.find("a"),
+  // Anchors corresponding to menu items
+  scrollItems = menuItems.map(function(){
+    var item = $($(this).attr("href"));
+    if ( item.length ) { return item; }
+  });
+
+  // Bind to scroll
+  $(window).scroll(function(){
+    // Get container scroll position
+    var fromTop = $(this).scrollTop() + topMenuHeight;
+
+    // Get id of current scroll item
+    var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+    });
+    // Get the id of the current element
+    cur = cur[cur.length-1];
+    var id = cur && cur.length ? cur[0].id : "";
+    // Set/remove active class
+    menuItems.removeClass("is-active").filter("[href='#"+id+"']").addClass("is-active");
+  });
+
 	// --------------------------------------------------------------------------
 	// Owl Carousel
 	// --------------------------------------------------------------------------
@@ -225,16 +262,27 @@ $(function() {
           } else {
             $(el).data('wow-delay');
           }
+
+          var animationName
+
+          if ( $(el).data('animation-name') ){
+            animationName = $(el).data('animationName');
+          }
+
           elWatcher.enterViewport(function() {
+            $(el).addClass(animationName);
             $(el).css({
               'animation-name': 'wowFade',
-              'animation-delay': delay
+              'animation-delay': delay,
+              'visibility': 'visible'
             });
           });
           elWatcher.exitViewport(function() {
+            $(el).removeClass(animationName);
             $(el).css({
               'animation-name': 'none',
-              'animation-delay': 0
+              'animation-delay': 0,
+              'visibility': 'hidden'
             });
           });
         });
