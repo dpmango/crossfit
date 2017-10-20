@@ -8,6 +8,8 @@
 	padding: 47px 0;
 	[class^="col"] {
 		margin: 0 0 30px;
+    display: flex;
+    flex-direction: column;
 	}
 }
 
@@ -17,6 +19,7 @@
 }
 
 .given-item {
+  flex: 1 0 auto;
 	position: relative;
 	z-index: 10;
 	background: #0088b4;
@@ -28,7 +31,7 @@
 	// min-height: 400px;
 	padding: 30px 18px 26px;
 	// min-height: 100%;
-	height: 100%;
+	// height: 100%;
   transition: all .3s ease;
 	&:after {
 		content: '';
