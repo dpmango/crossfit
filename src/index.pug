@@ -707,146 +707,184 @@ body
                                     th Суббота
                                     th Воскресенье
                             tbody
+                                mixin cfValeri
+                                    span.schedule-trainer
+                                        <b>CF</b> Валерий
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-3.jpg", alt="")
+                                            p.schedule-tooltip-name Валерий
+                                
+                                mixin cfYana
+                                    span.schedule-trainer
+                                        <b>CF</b> Яна
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-4.jpg", alt="")
+                                            p.schedule-tooltip-name Яна
+                              
+                                mixin cfVitali
+                                    span.schedule-trainer
+                                        <b>CF</b> Виталий
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-1.jpg", alt="")
+                                            p.schedule-tooltip-name Виталий
+                                
+                                mixin cfAndrey
+                                    span.schedule-trainer
+                                        <b>CF</b> Андрей
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-5.jpg", alt="")
+                                            p.schedule-tooltip-name Андрей
+                                mixin cfAnna
+                                    span.schedule-trainer
+                                        <b>CF</b> Анна
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training
+                                            figure.schedule-tooltip-photo
+                                                // img(src="images/trainer-4.jpg", alt="")
+                                            p.schedule-tooltip-name Анна
+                                            
+                                              
+                                mixin cfBasicValeri
+                                    span.schedule-trainer
+                                        <b>CF Basic</b> Валерий
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training Basic
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-3.jpg", alt="")
+                                            p.schedule-tooltip-name Валерий
+                                
+                                mixin cfBasicYana
+                                    span.schedule-trainer
+                                        <b>CF Basic</b> Яна
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Circuit training Basic
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-4.jpg", alt="")
+                                            p.schedule-tooltip-name Яна
+                                            
+                                mixin boxingMan
+                                    span.schedule-trainer
+                                        <b>Boxing men</b> Андрей
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Boxing men
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-5.jpg", alt="")
+                                            p.schedule-tooltip-name Андрей
+                                mixin BoxingWoman
+                                    span.schedule-trainer
+                                        <b>Boxing ladies</b> Андрей
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Boxing ladies
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-5.jpg", alt="")
+                                            p.schedule-tooltip-name Андрей
+                                mixin BoxingTeen
+                                    span.schedule-trainer
+                                        <b>Boxing Teen</b> Андрей
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Boxing Teen
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-5.jpg", alt="")
+                                            p.schedule-tooltip-name Андрей
+                                
+                                mixin cfPreschool
+                                    span.schedule-trainer
+                                        <b>CF Preschool 4-7</b> Ирина
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type CF Preschool 4-7
+                                            // figure.schedule-tooltip-photo
+                                                // img(src="images/trainer-5.jpg", alt="")
+                                            p.schedule-tooltip-name Ирина
+                                
+                                mixin cfTeensAnna
+                                    span.schedule-trainer 
+                                        <b>CF Teens 13-16 </b> Анна
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type CF Kids 8-12
+                                            // figure.schedule-tooltip-photo
+                                                // img(src="images/img-photo-1.jpg", alt="")
+                                            p.schedule-tooltip-name Ирина
+                                
+                                mixin cfKids
+                                    span.schedule-trainer
+                                        <b>CF Kids 8-12 </b> Ирина
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type CF Kids 8-12
+                                            // figure.schedule-tooltip-photo
+                                                // img(src="images/img-photo-1.jpg", alt="")
+                                            p.schedule-tooltip-name Ирина
+                                
+                                            
+                                mixin gymnastics
+                                    span.schedule-trainer
+                                        <b>Gymnastics</b> Мария
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type Gymnastics
+                                            // figure.schedule-tooltip-photo
+                                                // img(src="images/img-photo-1.jpg", alt="")
+                                            p.schedule-tooltip-name Мария
+                                
+                                mixin cfWeightlifting
+                                    span.schedule-trainer
+                                        <b>CF Weightlifting </b> Аркадий
+                                        .schedule-tooltip
+                                            strong.schedule-tooltip-type CF Weightlifting
+                                            figure.schedule-tooltip-photo
+                                                img(src="images/trainer-2.jpg", alt="")
+                                            p.schedule-tooltip-name Аркадий
+                                                        
                                 tr
                                     th 7:30
                                     td
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td
-                                        span.schedule-trainer
-                                            <b>CF</b> Яна
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfYana
                                     td
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td
-                                        span.schedule-trainer
-                                            <b>CF</b> Яна
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfYana
                                     td
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td
                                     td
                                 tr
                                     th 9:00
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF Basic</b> Яна
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfBasicYana
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF Basic</b> Яна
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfBasicYana
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td
                                     td
                                 tr
                                     th 10:00
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Яна
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfYana
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Яна
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfYana
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                     td 
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
-                                            .schedule-tooltip
-                                                strong.schedule-tooltip-type Circuit training
-                                                figure.schedule-tooltip-photo
-                                                    img(src="images/img-photo-1.jpg", alt="")
-                                                p.schedule-tooltip-name Имя тренера
+                                        +cfValeri
                                 // row
                                 tr
                                     th 11:00
@@ -854,11 +892,11 @@ body
         
                                     td 
                                     td
-                                        span.schedule-trainer <b>CF Preschool 4-7</b> Ирина
+                                        +cfPreschool
                                     td 
                                     td 
                                     td
-                                        span.schedule-trainer <b>Gymnastics</b> Мария
+                                        +gymnastics
                                     td
                                       
                                 tr
@@ -869,88 +907,81 @@ body
                                     td 
                                     td 
                                     td
-                                      span.schedule-trainer
-                                          <b>CF Basic</b> Валерий
-                                          .schedule-tooltip
-                                              strong.schedule-tooltip-type Circuit training
-                                              figure.schedule-tooltip-photo
-                                                  img(src="images/img-photo-1.jpg", alt="")
-                                              p.schedule-tooltip-name Имя тренера
+                                      +cfBasicValeri
                                               
-                                      span.schedule-trainer <b>CF Preschool 4-7</b> Ирина
+                                      +cfPreschool
                                       
                                     td
                                 tr
                                     th 13:00
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Яна
+                                        +cfYana
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
+                                        +cfValeri
                                     td
-                                        span.schedule-trainer <b>CF</b> Яна
+                                        +cfYana
                                     td
-                                        span.schedule-trainer <b>CF</b> Андрей
+                                        +cfAndrey
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
-                                        span.schedule-trainer <b>CF Kids 8-12</b> Ирина
+                                        +cfValeri
+                                        +cfKids
                                         
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
+                                        +cfValeri
 
                                 tr
                                     th 15:00
                                     td
                                     td
                                     td(rowspan="2")
-                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                        +cfWeightlifting
                                     td
                                     td(rowspan="2")
-                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                        +cfWeightlifting
                                     td
                                     td
-                                        span.schedule-trainer
-                                            <b>CF</b> Валерий
+                                        +cfValeri
                                 tr
                                     th 16:00
                                     td
                                     td
-                                        span.schedule-trainer <b>CF Kids 8-12 </b> Ирина
+                                        +cfKids
                                     td
-                                        span.schedule-trainer <b>CF Kids 8-12 </b> Ирина
+                                        +cfKids
                                     td
                                     td
                                     
                                 tr
                                     th 17:00
                                     td 
+                                    td  
+                                        +cfTeensAnna
                                     td
-                                        span.schedule-trainer <b>CF Teens 13-16 </b> Анна
                                     td
-                                    td
-                                        span.schedule-trainer <b>CF Kids 8-12 </b> Анна
+                                        +cfKids
                                     td
                                     td
                                     td
                                 tr
                                     th 18:00
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
-                                        span.schedule-trainer <b>Boxing Teens 12-16</b> Андрей
+                                        +cfValeri
+                                        +BoxingTeen
                                     td(rowspan="2")
-                                        span.schedule-trainer <b>CF</b> Анна
-                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                        +cfYana
+                                        +cfWeightlifting
                                     td
-                                        span.schedule-trainer <b>Gymnastics</b> Мария
-                                        span.schedule-trainer <b>CF</b> Яна
-                                        span.schedule-trainer <b>Boxing Teens 12-16</b> Андрей
+                                        +gymnastics
+                                        +cfYana
+                                        +BoxingTeen
                                     td(rowspan="2")
-                                        span.schedule-trainer <b>CF</b> Анна
-                                        span.schedule-trainer <b>CF Weightlifting </b> Аркадий
+                                        +cfAnna
+                                        +cfWeightlifting
                                     td
-                                      span.schedule-trainer <b>CF</b> Яна
-                                      span.schedule-trainer <b>Boxing Teens 12-16</b> Андрей
+                                        +cfYana
+                                        +BoxingTeen
                                     td
                                     
                                     td
@@ -958,18 +989,18 @@ body
                                 tr
                                     th 19:00
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
-                                        span.schedule-trainer <b>CF Basic</b> Яна
-                                        span.schedule-trainer <b>Boxing ladies</b> Андрей
+                                        +cfValeri
+                                        +cfBasicYana
+                                        +BoxingWoman
                                         
                                     td
-                                      span.schedule-trainer <b>CF</b> Валерий
-                                      span.schedule-trainer <b>CF Basic</b> Яна
-                                      span.schedule-trainer <b>Boxing ladies</b> Андрей
+                                        +cfValeri
+                                        +cfBasicYana
+                                        +BoxingWoman
                                     td
-                                      span.schedule-trainer <b>CF</b> Валерий
-                                      span.schedule-trainer <b>CF Basic</b> Яна
-                                      span.schedule-trainer <b>Boxing ladies</b> Андрей
+                                        +cfValeri
+                                        +cfBasicYana
+                                        +BoxingWoman
                                     td
         
                                     td
@@ -977,20 +1008,20 @@ body
                                 tr
                                     th 20:00
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
-                                        span.schedule-trainer <b>Boxing men</b> Андрей
+                                        +cfValeri
+                                        +boxingMan
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                         
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                         span.schedule-trainer <b>Stretching</b> Елена
-                                        span.schedule-trainer <b>Boxing men</b> Андрей  
+                                        +boxingMan  
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий    
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Валерий
-                                        span.schedule-trainer <b>Boxing men</b> Андрей
+                                        +cfValeri
+                                        +boxingMan
                                     td
                                     
                                     td
@@ -998,19 +1029,19 @@ body
                                 tr
                                     th 21:00
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                     td
-                                        span.schedule-trainer <b>CF</b> Виталий
+                                        +cfVitali
                                       
             section.base#sectionPrices
                 .container-fluid

@@ -125,7 +125,9 @@ gulp.task('spriteSvg', function () {
 gulp.task('html', function() {
 
 	return gulp.src(src.html)
-		.pipe(plumber())
+		.pipe(plumber(
+
+    ))
 		.pipe(pug({pretty: true}))
 		.pipe(gulp.dest(dist.html))
 		.pipe(browserSync.reload({ stream: true }))
