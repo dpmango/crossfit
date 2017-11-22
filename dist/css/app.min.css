@@ -2790,8 +2790,6 @@ label {
 
 .about-photos-item {
   position: relative;
-  width: 284px;
-  max-width: 20%;
   overflow: hidden;
   border: 2.5px solid #fff;
   margin: 0;

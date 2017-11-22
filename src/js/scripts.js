@@ -185,6 +185,23 @@ $(function() {
       }
 	});
 
+  $('.about-photos').owlCarousel({
+	    loop: false,
+	    margin: 0,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+	    nav: false,
+	    dots: false,
+	    items: 5,
+      responsive: {
+        768: {
+          items: 5
+        }
+      }
+	});
+
+
 
 	// --------------------------------------------------------------------------
 	// Tabs
