@@ -643,3 +643,45 @@ button {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0;
 }
+
+.mfp-no-margins img.mfp-img {
+	padding: 0;
+}
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+	top: 0;
+	bottom: 0;
+}
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+	padding: 0;
+}
+
+
+.mfp-with-scale .mfp-container,
+.mfp-with-scale.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  transition: all 0.3s ease-out;
+}
+
+
+.mfp-with-scale .mfp-container {
+    transform: scale(0);
+}
+
+.mfp-with-scale.mfp-ready .mfp-container {
+    opacity: 1;
+    transform: scale(1);
+}
+.mfp-with-scale.mfp-ready.mfp-bg {
+    opacity: 0.8;
+}
+
+.mfp-with-scale.mfp-removing .mfp-container {
+    transform: scale(0);
+    opacity: 0;
+}
+.mfp-with-scale.mfp-removing.mfp-bg {
+  opacity: 0;
+}

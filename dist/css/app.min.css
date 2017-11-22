@@ -752,6 +752,49 @@ img.mfp-img {
 .mfp-with-zoom.mfp-removing.mfp-bg {
   opacity: 0; }
 
+.mfp-no-margins img.mfp-img {
+  padding: 0; }
+
+/* position of shadow behind the image */
+.mfp-no-margins .mfp-figure:after {
+  top: 0;
+  bottom: 0; }
+
+/* padding for main container */
+.mfp-no-margins .mfp-container {
+  padding: 0; }
+
+.mfp-with-scale .mfp-container,
+.mfp-with-scale.mfp-bg {
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out; }
+
+.mfp-with-scale .mfp-container {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+
+.mfp-with-scale.mfp-ready .mfp-container {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+
+.mfp-with-scale.mfp-ready.mfp-bg {
+  opacity: 0.8; }
+
+.mfp-with-scale.mfp-removing .mfp-container {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  opacity: 0; }
+
+.mfp-with-scale.mfp-removing.mfp-bg {
+  opacity: 0; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -2752,7 +2795,8 @@ label {
   overflow: hidden;
   border: 2.5px solid #fff;
   margin: 0;
-  max-height: 305px; }
+  max-height: 305px;
+  cursor: pointer; }
   .about-photos-item:before {
     content: '';
     display: block;
@@ -2766,7 +2810,14 @@ label {
     height: 100%;
     display: block;
     -o-object-fit: cover;
-       object-fit: cover; }
+       object-fit: cover;
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease; }
+  .about-photos-item:hover img, .about-photos-item:focus img {
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03); }
 
 .about-list {
   margin: 0;
@@ -3676,6 +3727,52 @@ label {
 .reviews {
   padding: 30px 0 50px; }
 
+.section-carousel > .owl-nav .owl-prev, .section-carousel > .owl-nav .owl-next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 34px;
+  height: 34px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  background: #FFFFFF;
+  margin: 0 5px;
+  -webkit-transition: .25s;
+  -o-transition: .25s;
+  transition: .25s;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+  .section-carousel > .owl-nav .owl-prev:hover, .section-carousel > .owl-nav .owl-next:hover, .section-carousel > .owl-nav .owl-prev:focus, .section-carousel > .owl-nav .owl-next:focus {
+    background: #009CB4;
+    color: #fff; }
+
+.section-carousel > .owl-nav .owl-prev {
+  left: -35px; }
+
+.section-carousel > .owl-nav .owl-next {
+  right: -35px; }
+
+@media (max-width: 1250px) {
+  .section-carousel {
+    padding-left: 40px;
+    padding-right: 40px; }
+    .section-carousel > .owl-nav .owl-prev {
+      left: 0px; }
+    .section-carousel > .owl-nav .owl-next {
+      right: 0px; } }
+
 .reviews-heading {
   margin: 0 0 62px; }
 
@@ -3692,6 +3789,7 @@ label {
 
 .reviews-carousel .owl-nav {
   position: absolute;
+  z-index: 5;
   bottom: -17px;
   right: 10px;
   display: -webkit-box;
@@ -3700,6 +3798,8 @@ label {
   display: flex; }
 
 .reviews-carousel .owl-prev, .reviews-carousel .owl-next {
+  position: relative;
+  z-index: 5;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

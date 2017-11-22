@@ -90,10 +90,12 @@ body
                                 a(href="#sectionTimetable").nav-link Расписание
                             li
                                 a(href="#sectionPrices").nav-link Цены   
-                            li
-                                a(href="#sectionGallery").nav-link Галерея
+                            //- li
+                            //-     a(href="#sectionGallery").nav-link Галерея
                             li
                                 a(href="#sectionTestimonials").nav-link Отзывы
+                            li
+                                a(href="#sectionContacts").nav-link Контакты
                                                  
                                   
                                 
@@ -430,15 +432,15 @@ body
                     p.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s") <strong>CrossFit 19.05</strong> — аффилированный международной ассоциацией клуб премиум-класса у метро «Улица 1905 года».  Клуб оборудован профессиональными тренажерами и снарядами Yousteel.
 
                 .about-photos
-                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
+                    .about-photos-item.wow(href="images/photo-about-1.jpg" data-animation-name="wowFadeUp" data-wow-delay=".25s")
                         img(src="images/photo-about-1.jpg", alt="")
-                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".35s")
+                    .about-photos-item.wow(href="images/photo-about-2.jpg" data-animation-name="wowFadeUp" data-wow-delay=".35s")
                         img(src="images/photo-about-2.jpg", alt="")
-                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".45s")
+                    .about-photos-item.wow(href="images/photo-about-3.jpg" data-animation-name="wowFadeUp" data-wow-delay=".45s")
                         img(src="images/photo-about-3.jpg", alt="")
-                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".55s")
+                    .about-photos-item.wow(href="images/photo-about-4.jpg" data-animation-name="wowFadeUp" data-wow-delay=".55s")
                         img(src="images/photo-about-4.jpg", alt="")
-                    .about-photos-item.wow(data-animation-name="wowFadeUp" data-wow-delay=".65s")
+                    .about-photos-item.wow(href="images/photo-about-5.jpg" data-animation-name="wowFadeUp" data-wow-delay=".65s")
                         img(src="images/photo-about-5.jpg", alt="")
 
                 .container-fluid
@@ -555,7 +557,7 @@ body
                                 li Дают навыки самообороны.
 
             section.unique
-                .unique-obj
+                //- .unique-obj
                 .container-fluid
                     h2.unique-heading.wow.wowFadeUp Уникальность CrossFit 19.05
                     .row.justify-content-center
@@ -636,7 +638,8 @@ body
                     h2.coach-heading.wow.wowFadeUp Тренеры в <mark>CrossFit19.05</mark>
                     p.coach-caption.wow(data-animation-name="wowFadeUp" data-wow-delay=".15s") Имеют высшее образование в сфере физической культуры и спорта
                     .row
-                        .col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
+                      .section-carousel.owl-carousel
+                        .col.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
                             .coach-item
                                 figure.coach-item-image
                                     img(src="images/img-coach-1.jpg", alt="")
@@ -651,7 +654,7 @@ body
                                         dd Lorem ipsum dolor sit amet, consectetur 
                                         dt Достижения
                                         dd Lorem ipsum dolor sit amet, consectetur
-                        .col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
+                        .col.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
                             .coach-item
                                 figure.coach-item-image
                                     img(src="images/img-coach-2.jpg", alt="")
@@ -666,7 +669,7 @@ body
                                         dd Lorem ipsum dolor sit amet, consectetur 
                                         dt Достижения
                                         dd Lorem ipsum dolor sit amet, consectetur
-                        .col-md-4.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
+                        .col.wow(data-animation-name="wowFadeUp" data-wow-delay=".75s")
                             .coach-item
                                 figure.coach-item-image
                                     img(src="images/img-coach-3.jpg", alt="")
@@ -681,7 +684,22 @@ body
                                         dd Lorem ipsum dolor sit amet, consectetur 
                                         dt Достижения
                                         dd Lorem ipsum dolor sit amet, consectetur
-
+                        .col.wow(data-animation-name="wowFadeUp" data-wow-delay=".25s")
+                            .coach-item
+                                figure.coach-item-image
+                                    img(src="images/img-coach-1.jpg", alt="")
+                                .coach-item-desc
+                                    h3.coach-item-title
+                                        u Имя тренера 2
+                                    p.coach-item-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam 
+                                    dl.coach-item-accordion.js-accordion
+                                        dt Спецификация
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                                        dt Образование
+                                        dd Lorem ipsum dolor sit amet, consectetur 
+                                        dt Достижения
+                                        dd Lorem ipsum dolor sit amet, consectetur
+                                                        
                     .coach-personal
                         .coach-personal-obj
                         .row
@@ -1255,7 +1273,8 @@ body
                 .container-fluid
                     h2.reviews-heading.wow.wowFadeUp Мы уже в клубе 19.05 
                     .row
-                        .col-md-4.wow.wowFadeLeft(data-wow-delay=".25s")
+                      .section-carousel.owl-carousel
+                        .col.wow.wowFadeLeft(data-wow-delay=".25s")
                             .reviews-item
                                 .reviews-carousel.owl-carousel
                                     .reviews-image
@@ -1265,12 +1284,12 @@ body
                                         img(src="images/img-reviews-1.jpg", alt="")
                                         mark.reviews-mark после
                                 .reviews-desc
-                                    h3.reviews-title Иван иванов
+                                    h3.reviews-title Иван иванов 1 
                                     nav.reviews-social
                                         a(href="#").reviews-social-link
                                             +sprite('icon-social-vk')
                                     p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam
-                        .col-md-4.wow.wowFadeUp
+                        .col.wow.wowFadeUp
                             .reviews-item
                                 .reviews-carousel.owl-carousel
                                     .reviews-image
@@ -1280,12 +1299,12 @@ body
                                         img(src="images/img-reviews-1.jpg", alt="")
                                         mark.reviews-mark после
                                 .reviews-desc
-                                    h3.reviews-title Иван иванов
+                                    h3.reviews-title Иван иванов 2 
                                     nav.reviews-social
                                         a(href="#").reviews-social-link
                                             +sprite('icon-social-fb')
                                     p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam 
-                        .col-md-4.wow.wowFadeRight(data-wow-delay=".25s")
+                        .col.wow.wowFadeRight(data-wow-delay=".25s")
                             .reviews-item
                                 .reviews-carousel.owl-carousel
                                     .reviews-image
@@ -1295,11 +1314,27 @@ body
                                         img(src="images/img-reviews-1.jpg", alt="")
                                         mark.reviews-mark после
                                 .reviews-desc
-                                    h3.reviews-title Иван иванов
+                                    h3.reviews-title Иван иванов 3 
                                     nav.reviews-social
                                         a(href="#").reviews-social-link
                                             +sprite('icon-social-im')
                                     p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam
+                        .col.wow.wowFadeRight(data-wow-delay=".25s")
+                            .reviews-item
+                                .reviews-carousel.owl-carousel
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark до
+                                    .reviews-image
+                                        img(src="images/img-reviews-1.jpg", alt="")
+                                        mark.reviews-mark после
+                                .reviews-desc
+                                    h3.reviews-title Иван иванов 4
+                                    nav.reviews-social
+                                        a(href="#").reviews-social-link
+                                            +sprite('icon-social-im')
+                                    p.reviews-text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt t dolore magnam
+
 
             section.faq
                 .container-fluid
@@ -1330,7 +1365,7 @@ body
                             | Как часто надо ходить? Когда лучше ходить утро/вечер?
                         dd В нашем клубе для всех желающих есть возможность персональных занятий по различным направлениям: фитнес,  функциональный тренинг, TRX и др. На основе ваших целей тренер составит тренировочную программу, а диетолог -  программу питания.
 
-            section.contacts
+            section.contacts#sectionContacts
                 .contacts-map#contacts-map
                 .container-fluid
                     .contacts-desc

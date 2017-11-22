@@ -156,7 +156,10 @@ $(function() {
 	    nav: true,
 	    dots: false,
 	    navText: [iconPrev,iconNext],
-	    items: 1
+	    items: 1,
+      mouseDrag: false,
+      touchDrag: false,
+      freeDrag: false
 	});
 
 	$('.article-carousel').owlCarousel({
@@ -166,6 +169,20 @@ $(function() {
 	    dots: false,
 	    navText: [iconPrev,iconNext],
 	    items: 1
+	});
+
+  $('.section-carousel').owlCarousel({
+	    loop: true,
+	    margin: 10,
+	    nav: true,
+	    dots: false,
+	    navText: [iconPrev,iconNext],
+	    items: 1,
+      responsive: {
+        768: {
+          items: 3
+        }
+      }
 	});
 
 
@@ -245,6 +262,34 @@ $(function() {
 		event.preventDefault();
 		$.magnificPopup.close();
 	});
+
+  $('.about-photos').magnificPopup({
+    delegate: '.about-photos-item',
+    type: 'image',
+    closeOnContentClick: false,
+    closeBtnInside: false,
+    fixedContentPos: true,
+    tLoading: 'Загрузка #%curr%...',
+    mainClass: 'mfp-no-margins mfp-with-scale',
+    removalDelay: 300,
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1],
+      tPrev: 'Назад', // title for left button
+      tNext: 'Вперед', // title for right button
+      tCounter: '<span class="mfp-counter"><span>%curr%</span> из %total%</span>'
+    },
+    image: {
+      verticalFit: true,
+      tError: '<a href="%url%">Изображение #%curr%</a> не может быть загружено.'
+    },
+    // zoom: {
+		// 	enabled: true,
+		// 	duration: 300 // don't foget to change the duration also in CSS
+		// }
+  });
+
 
 	// WOW
   var monitorActive = false;

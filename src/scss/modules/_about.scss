@@ -15,7 +15,7 @@
 }
 
 .about-heading {
-	
+
 }
 
 
@@ -49,6 +49,13 @@
 		height: 100%;
 		display: block;
 		object-fit: cover;
+		transition: all .3s ease;
+	}
+	cursor: pointer;
+	&:hover{
+		img{
+			transform: scale(1.03);
+		}
 	}
 }
 
