@@ -3,10 +3,8 @@
   "version": "0.0.1",
   "author": "",
   "homepage": "",
-  "git": {
-    "scripts": {
-      "pre-push": "surge --project ./dist --domain crossfit2.surge.sh"
-    }
+  "scripts": {
+    "surge": "surge --project ./dist --domain crossfit2.surge.sh"
   },
   "dependencies": {
     "autoprefixer": "^7.1.4",
