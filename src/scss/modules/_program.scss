@@ -41,9 +41,10 @@
 
 .program-tabs {
 	position: relative;
+	z-index: 1;
 	background: #fff;
 	color: #2c2c2c;
-	padding: 20px 40px;
+	padding: 20px 0px;
 	&:after {
 		content: '';
 		display: block;
@@ -53,16 +54,20 @@
 		right: 0;
 		height: 140px;
 		box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
-		z-index: -1;
+		z-index: 1;
+		pointer-events: none;
 	}
 	@include breakpoint(md) {
-		padding: 20px 40px;
+		padding: 20px 0px;
 	}
 }
 
 .program-tabs-menu {
+	position: relative;
+	z-index: 2;
 	margin: 0 -5px -10px;
-	padding: 0;
+	padding: 0 40px;
+	background: white;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -108,8 +113,11 @@
 .program-tabs-panel {
 	position: fixed;
 	opacity: 0;
+	background: white;
+	z-index: 2;
 	visibility: hidden;
 	transition: .25s;
+	padding: 0 40px;
 	&.is-active {
 		position: relative;
 		visibility: visible;
@@ -161,7 +169,7 @@
 	@include breakpoint(lg) {
 		padding: 15px 30px 15px 40px;
 	}
-	
+
 }
 
 .program-day-mark {

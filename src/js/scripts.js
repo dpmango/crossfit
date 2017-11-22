@@ -186,14 +186,14 @@ $(function() {
 	});
 
   $('.about-photos').owlCarousel({
-	    loop: false,
+	    loop: true,
 	    margin: 0,
       autoplay: true,
       autoplayTimeout: 3000,
       autoplayHoverPause: true,
 	    nav: false,
 	    dots: false,
-	    items: 5,
+	    items: 3,
       responsive: {
         768: {
           items: 5
@@ -281,7 +281,7 @@ $(function() {
 	});
 
   $('.about-photos').magnificPopup({
-    delegate: '.about-photos-item',
+    delegate: '.owl-item:not(.cloned) .about-photos-item',
     type: 'image',
     closeOnContentClick: false,
     closeBtnInside: false,
