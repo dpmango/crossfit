@@ -83,14 +83,14 @@
 
 	}
 	thead th {
-		// &.is-hightlight,
+		&.is-hightlight,
 		&:hover {
 			background: #009CB4;
 			color: #fff;
 		}
 	}
 	tbody td {
-		// &.is-hightlight,
+		&.is-hightlight,
 		&:hover {
 			background: #1C353A;
 			border-color: #1C353A;

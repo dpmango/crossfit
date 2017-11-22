@@ -3391,10 +3391,10 @@ label {
     padding: 12px 5px;
     height: 80px;
     white-space: nowrap; }
-  .schedule-table thead th:hover, .schedule-table thead th:focus {
+  .schedule-table thead th.is-hightlight, .schedule-table thead th:hover, .schedule-table thead th:focus {
     background: #009CB4;
     color: #fff; }
-  .schedule-table tbody td:hover, .schedule-table tbody td:focus {
+  .schedule-table tbody td.is-hightlight, .schedule-table tbody td:hover, .schedule-table tbody td:focus {
     background: #1C353A;
     border-color: #1C353A; }
 
