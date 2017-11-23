@@ -306,6 +306,20 @@ $(function() {
 
 	});
 
+  // $('.js-table-hover').find('th:first-child, td:first-child').each(function(el, i){
+  //   var parentEl = $(this).parent().find('th:nth-child(2), td:nth-child(2)');
+  //
+  //   $(this).css({
+  //     'height': parentEl.outerHeight() + 'px',
+  //     'top': parentEl.position().top
+  //   })
+  // });
+
+
+  $('.js-table-hover').tableHeadFixer({'left' : 1});
+
+
+
 	// --------------------------------------------------------------------------
 	// Table
 	// --------------------------------------------------------------------------

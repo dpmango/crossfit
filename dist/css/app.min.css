@@ -3358,13 +3358,16 @@ label {
       margin: 0 22px; } }
 
 .schedule-table-scroll {
+  width: 100%;
   overflow-x: auto;
-  padding: 0 0 20px; }
+  padding: 0 0 20px;
+  overflow-y: visible; }
   @media (min-width: 992px) {
     .schedule-table-scroll {
       overflow: visible; } }
 
 .schedule-table {
+  position: relative;
   width: 100%;
   border-spacing: 4px 8px;
   text-align: center;
@@ -3378,7 +3381,11 @@ label {
     -o-transition: .25s;
     transition: .25s; }
     .schedule-table th:first-child, .schedule-table td:first-child {
-      width: 100px; }
+      width: 100px;
+      position: absolute;
+      z-index: 5;
+      top: auto;
+      left: 10px; }
   .schedule-table th {
     border-color: #151515;
     -webkit-box-shadow: none;

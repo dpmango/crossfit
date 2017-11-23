@@ -43,14 +43,17 @@
 }
 
 .schedule-table-scroll {
+	width: 100%;
 	overflow-x: auto;
 	padding: 0 0 20px;
+	overflow-y: visible;
 	@include breakpoint(lg) {
 		overflow: visible;
 	}
 }
 
 .schedule-table {
+	position: relative;
 	width: 100%;
 	border-spacing: 4px 8px;
 	text-align: center;
@@ -64,8 +67,27 @@
 		vertical-align: middle;
 		transition: .25s;
 		&:first-child {
+			// display: block;
 			width: 100px;
+			position: absolute;
+			z-index: 5;
+			top: auto;
+			left: 10px;
 		}
+		// &:nth-child(2){
+		// 	position: relative;
+		// 	padding-left: 120px;
+		// 	&::after{
+		// 		display: inline-block;
+		// 		content: ' ';
+		// 		position: absolute;
+		// 		left: 110px;
+		// 		top: 0;
+		// 		bottom: 0;
+		// 		background: #313131;
+		// 		width: 1px;
+		// 	}
+		// }
 	}
 	th {
 		border-color: #151515;
