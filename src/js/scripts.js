@@ -339,10 +339,9 @@ $(function() {
   //   })
   // });
 
-
-  $('.js-table-hover').tableHeadFixer({'left' : 1});
-
-
+  if ( $(window).width() < 992 ){
+    $('.js-table-hover').tableHeadFixer({'left' : 1});
+  }
 
 	// --------------------------------------------------------------------------
 	// Table

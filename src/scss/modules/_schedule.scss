@@ -66,13 +66,15 @@
 	th, td {
 		vertical-align: middle;
 		transition: .25s;
-		&:first-child {
-			// display: block;
-			width: 100px;
-			position: absolute;
-			z-index: 5;
-			top: auto;
-			left: 10px;
+		@media(max-width: 992px){
+			&:first-child {
+				// display: block;
+				width: 100px;
+				position: absolute;
+				z-index: 5;
+				top: auto;
+				left: 10px;
+			}
 		}
 		// &:nth-child(2){
 		// 	position: relative;

@@ -3409,12 +3409,13 @@ label {
     -webkit-transition: .25s;
     -o-transition: .25s;
     transition: .25s; }
-    .schedule-table th:first-child, .schedule-table td:first-child {
-      width: 100px;
-      position: absolute;
-      z-index: 5;
-      top: auto;
-      left: 10px; }
+    @media (max-width: 992px) {
+      .schedule-table th:first-child, .schedule-table td:first-child {
+        width: 100px;
+        position: absolute;
+        z-index: 5;
+        top: auto;
+        left: 10px; } }
   .schedule-table th {
     border-color: #151515;
     -webkit-box-shadow: none;
