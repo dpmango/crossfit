@@ -65,7 +65,7 @@
 .program-tabs-menu {
 	position: relative;
 	z-index: 2;
-	margin: 0 -5px -10px;
+	margin: -10px 0;
 	padding: 0 40px;
 	background: white;
 	list-style: none;
@@ -91,6 +91,9 @@
 		& > li {
 			width: 14.28%;
 		}
+	}
+	@media (max-width: 768px) {
+		padding: 0 30px;
 	}
 }
 
@@ -160,14 +163,24 @@
 		right: -68px;
 	}
 }
-
+.program-slide{
+	display: flex;
+	justify-content: center;
+	@media (max-width: 768px) {
+		flex-direction: column;;
+	}
+}
 
 .program-day {
+	flex: 0 1 33.3%;
 	font-size: 14px;
 	line-height: 18px;
 	padding: 15px 0;
 	@include breakpoint(lg) {
 		padding: 15px 30px 15px 40px;
+	}
+	@media (max-width: 768px) {
+		flex: 0 0 auto;
 	}
 
 }

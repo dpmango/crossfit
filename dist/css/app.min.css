@@ -1891,7 +1891,6 @@ label {
   margin: 0 0 73px; }
   .begin .request {
     top: 70px;
-    max-width: 1024px;
     margin: -35px 0 0; }
   @media (min-width: 768px) {
     .begin {
@@ -2631,7 +2630,7 @@ label {
 .program-tabs-menu {
   position: relative;
   z-index: 2;
-  margin: 0 -5px -10px;
+  margin: -10px 0;
   padding: 0 40px;
   background: white;
   list-style: none;
@@ -2658,6 +2657,9 @@ label {
   @media (min-width: 768px) {
     .program-tabs-menu > li {
       width: 14.28%; } }
+  @media (max-width: 768px) {
+    .program-tabs-menu {
+      padding: 0 30px; } }
 
 .program-tabs-btn {
   -webkit-transition: .25s;
@@ -2732,13 +2734,40 @@ label {
   .program-carousel .owl-next {
     right: -68px; }
 
+.program-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media (max-width: 768px) {
+    .program-slide {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
 .program-day {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 33.3%;
+      -ms-flex: 0 1 33.3%;
+          flex: 0 1 33.3%;
   font-size: 14px;
   line-height: 18px;
   padding: 15px 0; }
   @media (min-width: 992px) {
     .program-day {
       padding: 15px 30px 15px 40px; } }
+  @media (max-width: 768px) {
+    .program-day {
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 auto;
+          -ms-flex: 0 0 auto;
+              flex: 0 0 auto; } }
 
 .program-day-mark {
   text-transform: uppercase;

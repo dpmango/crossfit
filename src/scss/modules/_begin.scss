@@ -11,7 +11,7 @@
 	margin: 0 0 73px;
 	.request {
 		top: 70px;
-		max-width: 1024px;
+		// max-width: 1024px;
 		margin: -35px 0 0;
 	}
 	@include breakpoint(md) {
@@ -158,4 +158,3 @@
 	display: block;
 	font-size: 14px;
 }
-
