@@ -1888,7 +1888,7 @@ label {
   background: #060603;
   color: #fff;
   padding: 280px 0 0;
-  margin: 0 0 73px; }
+  margin: 0 0 153px; }
   .begin .request {
     top: 70px;
     margin: -35px 0 0; }
@@ -2029,8 +2029,7 @@ label {
 .request {
   position: relative;
   background: #fff;
-  color: #2c2c2c;
-  padding: 25px 30px 50px; }
+  color: #2c2c2c; }
   .request:after {
     content: '';
     display: block;
@@ -2041,14 +2040,19 @@ label {
     height: 140px;
     -webkit-box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
             box-shadow: 1.4px 7.9px 76px rgba(202, 202, 202, 0.84);
-    z-index: -1; }
+    z-index: 1; }
+  .request form {
+    position: relative;
+    z-index: 2;
+    background: white;
+    padding: 25px 30px 50px; }
+    @media (min-width: 992px) {
+      .request form {
+        padding: 45px 40px 50px 40px; } }
   .request .btn {
     white-space: nowrap;
     padding-left: 20px;
     padding-right: 20px; }
-  @media (min-width: 992px) {
-    .request {
-      padding: 45px 88px 50px 37px; } }
 
 .request-heading {
   font-size: 32px;
