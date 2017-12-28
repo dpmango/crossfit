@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------
 
 .app-standart {
-	
+
 	ul {
 		@extend .app-ul;
 	}
@@ -16,4 +16,8 @@
 		@extend .app-table;
 	}
 
+}
+
+.hidden-links{
+	display: none;
 }

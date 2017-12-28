@@ -138,13 +138,13 @@ body
                                             u Осенние акции в CrossFit 19.05
                                         time.begin-news-date 19.11.17
                     .request.wow(data-animation-name="wowFadeUp" data-wow-delay="1.25s")
-                        form(action="#")
+                        form(action="cta.php" js-validate-1)
                             h2.request-heading Попробуйте кроссфит!  Первая тренировка <mark>бесплатно.</mark> 
                             .row.row-offset-14
                                 .col-md-4
-                                    input(type="text", placeholder="Ваше имя").app-input
+                                    input(type="text" name="name" placeholder="Ваше имя").app-input
                                 .col-md-4
-                                    input(type="tel", placeholder="Телефон ").app-input.js-mask-phone
+                                    input(type="tel" name="phone" placeholder="Телефон ").app-input.js-mask-phone
                                 .col-md-4
                                     button.btn.btn-red.btn-block Отправить заявку
 
@@ -731,13 +731,13 @@ body
                                 p.info-item-text После занятий можно расслабиться в сауне или на массаже. В нашем кафе готовят только полезные и вкусные блюда. 
 
                     .request.wow(data-animation-name="wowFadeUp" data-wow-delay=".5s")
-                        form(action="#")
+                        form(action="cta.php" js-validate-2)
                             h2.request-heading Попробуйте кроссфит!  Первая тренировка <mark>бесплатно.</mark> 
                             .row.row-offset-14
                                 .col-md-4
-                                    input(type="text", placeholder="Ваше имя").app-input
+                                    input(type="text" name="name" placeholder="Ваше имя").app-input
                                 .col-md-4
-                                    input(type="tel", placeholder="Телефон ").app-input.js-mask-phone
+                                    input(type="tel" name="phone" placeholder="Телефон ").app-input.js-mask-phone
                                 .col-md-4
                                     button.btn.btn-red.btn-block Отправить заявку
 
@@ -1366,14 +1366,14 @@ body
             section.request.request--panel.wow.wowFadeUp
                 .request-obj
                 .container-fluid
-                    form(action="#")
+                    form(action="cta.php" js-validate-3)
                         h2.request-heading Попробуйте кроссфит! <br> Первая тренировка <mark>бесплатно.</mark>
                         .request-form
                             .row.row-offset-14
                                 .col-md-4
-                                    input(type="text", placeholder="Ваше имя").app-input
+                                    input(type="text" name="name" placeholder="Ваше имя").app-input
                                 .col-md-4
-                                    input(type="tel", placeholder="Телефон ").app-input.js-mask-phone
+                                    input(type="tel" name="phone" placeholder="Телефон ").app-input.js-mask-phone
                                 .col-md-4
                                     button.btn.btn-red.btn-block Отправить заявку
 
@@ -1486,15 +1486,15 @@ body
  
     
     .popup.mfp-hide#popup-callback
-        form(action="#")
+        form(action="cta.php" js-validate-4)
             button.popup-close(data-mfp-close)
                 +sprite('icon-close')
             h2.popup-heading Заказать Обратный звонок
             p.popup-text Вам скоро позвонят
             .popup-form
-                input(type="text", placeholder="Ваше имя").app-input
-                input(type="tel", placeholder="Телефон").app-input.js-mask-phone
-                a(href="#popup-success", data-mfp).btn.btn-red.btn-block Заказать
+                input(type="text" name="name" placeholder="Ваше имя").app-input
+                input(type="tel" name="phone" placeholder="Телефон").app-input.js-mask-phone
+                button(tupe="submit").btn.btn-red.btn-block Заказать
 
     .popup.mfp-hide#popup-success
         form(action="#")
@@ -1589,7 +1589,10 @@ body
                 a(href="#").article-next
                     | Следующая Новость
                     +sprite('icon-right')
-
+    
+    .hidden-links
+      a(href="#popup-success" data-mfp="#popup-success" class="open-mfp-sucess")
+        
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTSDYvTCv33uOODYmVs0loKN0OQ45Bhw0")
     script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js")
     // script(src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js")

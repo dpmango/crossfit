@@ -251,6 +251,18 @@ gulp.task('copy-root', function() {
 });
 
 // --------------------------------------------------------------------------
+// COPY PHP
+// --------------------------------------------------------------------------
+
+
+gulp.task('copy-php', function() {
+
+	return gulp.src('src/php/*.php')
+		.pipe(gulp.dest('dist/php'))
+		// .pipe(browserSync.reload({ stream: true }))
+});
+
+// --------------------------------------------------------------------------
 // Watch
 // --------------------------------------------------------------------------
 
@@ -280,4 +292,4 @@ gulp.task('watch', function() {
 
 // Gulp
 
-gulp.task('default', ['clean', 'spriteImages', 'spriteSvg', 'html', 'fonts', 'images', 'svg', 'video', 'copy-root', 'scss', 'js', 'watch']);
+gulp.task('default', ['clean', 'spriteImages', 'spriteSvg', 'html', 'fonts', 'images', 'svg', 'video', 'copy-root', 'copy-php', 'scss', 'js', 'watch']);
